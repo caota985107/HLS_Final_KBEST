@@ -5,12 +5,12 @@
 
 
 using namespace std;
-extern "C" void Modulation(ap_uint<8> in_stream, double xr[size_H], double xi[size_H]){
+void Modulation(ap_uint<8> *in_stream, double xr[size_H], double xi[size_H]){
 	int i;
 	ap_uint<1> tmep[8];
 	for(i=0; i<=8; i++){
-		tmep[i] = in_stream % 2;
-		in_stream = in_stream / 2;
+		tmep[i] = *in_stream % 2;
+		*in_stream = *in_stream / 2;
 	}
 
 

@@ -138,7 +138,7 @@ static int T(int num, int round) {
 	int i;
 	int result;
 	splitIntToArray(num, numArray);
-	leftLoop4int(numArray, 1);//ï¿½rï¿½`ï¿½ï¿½ 
+	leftLoop4int(numArray, 1);//¦r´`Àô 
 
 
 	T_label4:for(i = 0; i < 4; i++)
@@ -318,7 +318,7 @@ void aes_return(char *p, int plen){
 	aes_return_label23:for(k = 0; k < plen; k += 16) {
 		convertToIntArray(p + k, pArray);
 
-		addRoundKey(pArray, 0);//ï¿½@ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½_ï¿½[
+		addRoundKey(pArray, 0);//¤@¶}©lªº½ü±KÆ_¥[
 
 		aes_return_label12:for(i = 1; i < 10; i++){
 
@@ -332,9 +332,9 @@ void aes_return(char *p, int plen){
 
 		}
 
-		subBytes(pArray);//ï¿½rï¿½`ï¿½Nï¿½ï¿½ 
+		subBytes(pArray);//¦r¸`¥N´« 
 
-		shiftRows(pArray);//ï¿½æ²¾ï¿½ï¿½
+		shiftRows(pArray);//¦æ²¾¦ì
 
 		addRoundKey(pArray, 10);
 
@@ -484,84 +484,42 @@ void deAes_return(char *c, int clen) {
 }
 
 
-/*
-void AES_En_De_test(char bit128in_out[16], int in_char_len[3], char key[16] )
+
+void AES_En_De(ap_uint<8> *in_data, ap_uint<8> *out_data, ap_uint<1> op, ap_uint<8> *key)
 {
-#pragma HLS INTERFACE s_axilite port=return
-#pragma HLS INTERFACE s_axilite port=bit128in_out
-	int char_len = in_char_len[0];
-	int En_Decryption = in_char_len[1];
-	in_char_len[2]=9;
 
+	int char_len = 16;
+	int En_Decryption = op;
 
-	if( strcmp(temp_key,key)!=0 )
-	{
-		extendKey(key);//ï¿½Xï¿½iï¿½Kï¿½_ 
-		strcpy(temp_key,key);
-		printf("***extendkey\n");
-	}
-
-	if(En_Decryption == 0)
-	{
-		aes_return(bit128in_out, char_len);
-
-	}
-	else
-	{
-		deAes_return(bit128in_out, char_len);
-	}
-
-}
-*/
-
-
-void AES_En_De( my_stream_type* in_stream, my_stream_type* out_stream, int in_char_len[3], char key[16] )
-{
-#pragma HLS INTERFACE s_axilite port=key
-#pragma HLS INTERFACE s_axilite port=in_char_len
-#pragma HLS ARRAY_PARTITION variable=w complete dim=1
-#pragma HLS PIPELINE enable_flush
-#pragma HLS INTERFACE axis register both port=out_stream
-#pragma HLS INTERFACE axis register both port=in_stream
-#pragma HLS INTERFACE s_axilite port=return
-
-
-
-	int char_len = in_char_len[0];
-	int En_Decryption = in_char_len[1];
-	in_char_len[2]=9;
 	int i,r;
 
 	my_stream_type input, output;
-#pragma HLS ARRAY_PARTITION variable=input.data complete dim=1
-#pragma HLS ARRAY_PARTITION variable=output.data complete dim=1
 
 #pragma HLS ARRAY_PARTITION variable=bit128in_buffer cyclic factor=16 dim=1
 
-	for( r = 0; r < char_len;  ){
-		input = *in_stream;
-		for( i =0; i< 16; i++){
+	for(r=0; r<char_len; r++){
 #pragma HLS UNROLL
-			bit128in_buffer[r] = input.data[i];
-			r = r+1;
-		}
-		++in_stream;
+		bit128in_buffer[r] = (char)in_data[r];
 	}
 
 
 	char key_change_flag = 0;
+	char key_char[16];
+
 	for(i = 0;i<16;i++)
 	{
 #pragma HLS PIPELINE rewind
-		if(temp_key[i]!=key[i])
+		key_char[i] = (char)key[i];
+		if(temp_key[i]!=(char)key[i])
 		{
-			temp_key[i]=key[i];
+			temp_key[i]=(char)key[i];
 			key_change_flag = 1;
 		}
 	}
+
 	if(key_change_flag==1)
 	{
-		extendKey(key);
+		extendKey(key_char);
 	}
 
 
@@ -575,19 +533,12 @@ void AES_En_De( my_stream_type* in_stream, my_stream_type* out_stream, int in_ch
 	}
 
 
-	for( r = 0; r < char_len;  ){
-		for( i =0; i< 16; i++){
+
+	for(r = 0; r<char_len; r++){
 #pragma HLS UNROLL
-			output.data[i] = bit128in_buffer[r] ;
-			output.user = (r == 0 && i == 0)? 1: 0;
-			output.last = (r == (char_len-1) && i == 15)? 1: 0;
-			r = r+1;
-		}
-		*out_stream = output;
-		++out_stream;
+		out_data[r] = (int)bit128in_buffer[r];
 	}
 
+
 }
-
-
 

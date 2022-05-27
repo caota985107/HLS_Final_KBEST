@@ -1,7 +1,7 @@
 #include <ap_int.h>
 #include <math.h>
 #include <iostream>
-#include "QRD.h"
+#include "MIMO.h"
 
 using namespace std;
 void DeModulation(FIXED_LEN in[8], ap_uint<8> *out_stream){
