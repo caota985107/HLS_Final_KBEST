@@ -12,7 +12,7 @@ open_project -reset $PROJ
 #add_files "Modulation.cpp Rayleigh.cpp AWGN.cpp QRD.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
 #add_files -tb "tb_AWGN.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
 
-add_files "aes.cpp AWGN.cpp DeModulation.cpp Modulation.cpp normal_rng.cpp QRD.cpp Rayleigh.cpp "
+add_files "aes.cpp AWGN.cpp DeModulation.cpp MIMO.cpp Modulation.cpp normal_rng.cpp QRD.cpp Rayleigh.cpp "
 add_files -tb "TESTBENCH.cpp "
 set_top TOP
 
