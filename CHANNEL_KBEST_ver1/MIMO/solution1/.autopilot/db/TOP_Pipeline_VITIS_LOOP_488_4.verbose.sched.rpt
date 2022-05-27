@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vitis HLS Report for 'TOP_Pipeline_VITIS_LOOP_488_4'
+================================================================
+* Date:           Wed May 25 23:55:16 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  30.00 ns|  7.256 ns|     8.10 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       10|       10|  0.300 us|  0.300 us|   10|   10|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_488_4  |        8|        8|         2|          1|          1|     8|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.22>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.42ns)   --->   "%store_ln0 = store i4 0, i4 %i"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader3"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i_1 = load i4 %i" [src/QRD.cpp:488]   --->   Operation 8 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.72ns)   --->   "%icmp_ln488 = icmp_eq  i4 %i_1, i4 8" [src/QRD.cpp:488]   --->   Operation 10 'icmp' 'icmp_ln488' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.79ns)   --->   "%add_ln488 = add i4 %i_1, i4 1" [src/QRD.cpp:488]   --->   Operation 12 'add' 'add_ln488' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln488 = br i1 %icmp_ln488, void %.split7_ifconv, void %.preheader.preheader.preheader.exitStub" [src/QRD.cpp:488]   --->   Operation 13 'br' 'br_ln488' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_2_cast = zext i4 %i_1" [src/QRD.cpp:488]   --->   Operation 14 'zext' 'i_2_cast' <Predicate = (!icmp_ln488)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%y_addr = getelementptr i64 %y, i64 0, i64 %i_2_cast" [src/QRD.cpp:489]   --->   Operation 15 'getelementptr' 'y_addr' <Predicate = (!icmp_ln488)> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (0.67ns)   --->   "%LD = load i3 %y_addr" [src/QRD.cpp:489]   --->   Operation 16 'load' 'LD' <Predicate = (!icmp_ln488)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_1 : Operation 17 [1/1] (0.42ns)   --->   "%store_ln488 = store i4 %add_ln488, i4 %i" [src/QRD.cpp:488]   --->   Operation 17 'store' 'store_ln488' <Predicate = (!icmp_ln488)> <Delay = 0.42>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 68 'ret' 'ret_ln0' <Predicate = (icmp_ln488)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.25>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln448 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [src/QRD.cpp:448]   --->   Operation 18 'specloopname' 'specloopname_ln448' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/2] (0.67ns)   --->   "%LD = load i3 %y_addr" [src/QRD.cpp:489]   --->   Operation 19 'load' 'LD' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%ireg = bitcast i64 %LD"   --->   Operation 20 'bitcast' 'ireg' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln564 = trunc i64 %ireg"   --->   Operation 21 'trunc' 'trunc_ln564' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i64.i32, i64 %ireg, i32 63"   --->   Operation 22 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%exp_tmp = partselect i11 @_ssdm_op_PartSelect.i11.i64.i32.i32, i64 %ireg, i32 52, i32 62"   --->   Operation 23 'partselect' 'exp_tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln501 = zext i11 %exp_tmp"   --->   Operation 24 'zext' 'zext_ln501' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln574 = trunc i64 %ireg"   --->   Operation 25 'trunc' 'trunc_ln574' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%p_Result_2 = bitconcatenate i53 @_ssdm_op_BitConcatenate.i53.i1.i52, i1 1, i52 %trunc_ln574"   --->   Operation 26 'bitconcatenate' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln578 = zext i53 %p_Result_2"   --->   Operation 27 'zext' 'zext_ln578' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.10ns)   --->   "%man_V_3 = sub i54 0, i54 %zext_ln578"   --->   Operation 28 'sub' 'man_V_3' <Predicate = true> <Delay = 1.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.40ns)   --->   "%man_V_4 = select i1 %p_Result_s, i54 %man_V_3, i54 %zext_ln578"   --->   Operation 29 'select' 'man_V_4' <Predicate = true> <Delay = 0.40> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (1.13ns)   --->   "%icmp_ln580 = icmp_eq  i63 %trunc_ln564, i63 0"   --->   Operation 30 'icmp' 'icmp_ln580' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.80ns)   --->   "%F2 = sub i12 1075, i12 %zext_ln501"   --->   Operation 31 'sub' 'F2' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.97ns)   --->   "%icmp_ln590 = icmp_sgt  i12 %F2, i12 8"   --->   Operation 32 'icmp' 'icmp_ln590' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.80ns)   --->   "%add_ln590 = add i12 %F2, i12 4088"   --->   Operation 33 'add' 'add_ln590' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.80ns)   --->   "%sub_ln590 = sub i12 8, i12 %F2"   --->   Operation 34 'sub' 'sub_ln590' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.37ns)   --->   "%sh_amt = select i1 %icmp_ln590, i12 %add_ln590, i12 %sub_ln590"   --->   Operation 35 'select' 'sh_amt' <Predicate = true> <Delay = 0.37> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%sext_ln590 = sext i12 %sh_amt"   --->   Operation 36 'sext' 'sext_ln590' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.97ns)   --->   "%icmp_ln591 = icmp_eq  i12 %F2, i12 8"   --->   Operation 37 'icmp' 'icmp_ln591' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln592 = trunc i54 %man_V_4"   --->   Operation 38 'trunc' 'trunc_ln592' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.97ns)   --->   "%icmp_ln594 = icmp_ult  i12 %sh_amt, i12 54"   --->   Operation 39 'icmp' 'icmp_ln594' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i12.i32.i32, i12 %sh_amt, i32 4, i32 11"   --->   Operation 40 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.84ns)   --->   "%icmp_ln612 = icmp_eq  i8 %tmp, i8 0"   --->   Operation 41 'icmp' 'icmp_ln612' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_1)   --->   "%zext_ln595 = zext i32 %sext_ln590"   --->   Operation 42 'zext' 'zext_ln595' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_1)   --->   "%ashr_ln595 = ashr i54 %man_V_4, i54 %zext_ln595"   --->   Operation 43 'ashr' 'ashr_ln595' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_1)   --->   "%trunc_ln595 = trunc i54 %ashr_ln595"   --->   Operation 44 'trunc' 'trunc_ln595' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_1)   --->   "%tmp_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i64.i32, i64 %ireg, i32 63"   --->   Operation 45 'bitselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_1)   --->   "%select_ln597 = select i1 %tmp_2, i16 65535, i16 0"   --->   Operation 46 'select' 'select_ln597' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_3)   --->   "%sext_ln590cast = trunc i32 %sext_ln590"   --->   Operation 47 'trunc' 'sext_ln590cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_3)   --->   "%shl_ln613 = shl i16 %trunc_ln592, i16 %sext_ln590cast"   --->   Operation 48 'shl' 'shl_ln613' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_2)   --->   "%xor_ln580 = xor i1 %icmp_ln580, i1 1"   --->   Operation 49 'xor' 'xor_ln580' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_2)   --->   "%and_ln591 = and i1 %icmp_ln591, i1 %xor_ln580"   --->   Operation 50 'and' 'and_ln591' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (0.28ns)   --->   "%or_ln591 = or i1 %icmp_ln580, i1 %icmp_ln591"   --->   Operation 51 'or' 'or_ln591' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node and_ln590)   --->   "%xor_ln591 = xor i1 %or_ln591, i1 1"   --->   Operation 52 'xor' 'xor_ln591' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 53 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln590 = and i1 %icmp_ln590, i1 %xor_ln591"   --->   Operation 53 'and' 'and_ln590' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_1)   --->   "%and_ln594 = and i1 %and_ln590, i1 %icmp_ln594"   --->   Operation 54 'and' 'and_ln594' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node or_ln580)   --->   "%or_ln590 = or i1 %or_ln591, i1 %icmp_ln590"   --->   Operation 55 'or' 'or_ln590' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (0.00ns) (grouped into LUT with out node or_ln580)   --->   "%xor_ln590 = xor i1 %or_ln590, i1 1"   --->   Operation 56 'xor' 'xor_ln590' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.00ns) (grouped into LUT with out node or_ln580)   --->   "%and_ln612 = and i1 %icmp_ln612, i1 %xor_ln590"   --->   Operation 57 'and' 'and_ln612' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_3)   --->   "%select_ln580 = select i1 %icmp_ln580, i16 0, i16 %shl_ln613"   --->   Operation 58 'select' 'select_ln580' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln580 = or i1 %icmp_ln580, i1 %and_ln612"   --->   Operation 59 'or' 'or_ln580' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (1.50ns) (out node of the LUT)   --->   "%select_ln580_1 = select i1 %and_ln594, i16 %trunc_ln595, i16 %select_ln597"   --->   Operation 60 'select' 'select_ln580_1' <Predicate = true> <Delay = 1.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.35ns) (out node of the LUT)   --->   "%select_ln580_2 = select i1 %and_ln591, i16 %trunc_ln592, i16 0"   --->   Operation 61 'select' 'select_ln580_2' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.90ns) (out node of the LUT)   --->   "%select_ln580_3 = select i1 %or_ln580, i16 %select_ln580, i16 %select_ln580_1"   --->   Operation 62 'select' 'select_ln580_3' <Predicate = true> <Delay = 0.90> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.00ns) (grouped into LUT with out node select_ln580_4)   --->   "%or_ln580_1 = or i1 %or_ln580, i1 %and_ln590"   --->   Operation 63 'or' 'or_ln580_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.35ns) (out node of the LUT)   --->   "%select_ln580_4 = select i1 %or_ln580_1, i16 %select_ln580_3, i16 %select_ln580_2"   --->   Operation 64 'select' 'select_ln580_4' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%y_receive_V_addr = getelementptr i16 %y_receive_V, i64 0, i64 %i_2_cast" [src/QRD.cpp:489]   --->   Operation 65 'getelementptr' 'y_receive_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.67ns)   --->   "%store_ln489 = store i16 %select_ln580_4, i3 %y_receive_V_addr" [src/QRD.cpp:489]   --->   Operation 66 'store' 'store_ln489' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader3"   --->   Operation 67 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 30ns, clock uncertainty: 8.1ns.
+
+ <State 1>: 1.22ns
+The critical path consists of the following:
+	'alloca' operation ('i') [3]  (0 ns)
+	'load' operation ('i', src/QRD.cpp:488) on local variable 'i' [7]  (0 ns)
+	'add' operation ('add_ln488', src/QRD.cpp:488) [11]  (0.797 ns)
+	'store' operation ('store_ln488', src/QRD.cpp:488) of variable 'add_ln488', src/QRD.cpp:488 on local variable 'i' [65]  (0.427 ns)
+
+ <State 2>: 7.26ns
+The critical path consists of the following:
+	'load' operation ('v', src/QRD.cpp:489) on array 'y' [17]  (0.677 ns)
+	'sub' operation ('F2') [29]  (0.809 ns)
+	'icmp' operation ('icmp_ln590') [30]  (0.976 ns)
+	'select' operation ('sh_amt') [33]  (0.375 ns)
+	'icmp' operation ('icmp_ln594') [37]  (0.976 ns)
+	'and' operation ('and_ln594') [52]  (0 ns)
+	'select' operation ('select_ln580_1') [58]  (1.51 ns)
+	'select' operation ('select_ln580_3') [60]  (0.904 ns)
+	'select' operation ('select_ln580_4') [62]  (0.357 ns)
+	'store' operation ('store_ln489', src/QRD.cpp:489) of variable 'select_ln580_4' on array 'y_receive_V' [64]  (0.677 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

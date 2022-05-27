@@ -1,0 +1,226 @@
+
+
+================================================================
+== Vitis HLS Report for 'QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6'
+================================================================
+* Date:           Wed May 25 23:55:48 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  30.00 ns|  3.791 ns|     8.10 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       66|       66|  1.980 us|  1.980 us|   66|   66|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |          Loop Name         |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_02_VITIS_LOOP_251_6  |       64|       64|         1|          1|          1|    64|       yes|
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      79|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       0|     387|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      63|    -|
+|Register         |        -|     -|      17|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      17|     529|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------+---------------+---------+----+---+----+-----+
+    |      Instance      |     Module    | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------+---------------+---------+----+---+----+-----+
+    |mux_84_16_1_1_U304  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_16_1_1_U305  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_16_1_1_U306  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_16_1_1_U307  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_16_1_1_U308  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_16_1_1_U309  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_16_1_1_U310  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_16_1_1_U311  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_16_1_1_U312  |mux_84_16_1_1  |        0|   0|  0|  43|    0|
+    +--------------------+---------------+---------+----+---+----+-----+
+    |Total               |               |        0|   0|  0| 387|    0|
+    +--------------------+---------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln250_1_fu_605_p2     |         +|   0|  0|  14|           7|           1|
+    |add_ln250_fu_617_p2       |         +|   0|  0|  12|           4|           1|
+    |add_ln251_fu_871_p2       |         +|   0|  0|  12|           4|           1|
+    |add_ln252_fu_661_p2       |         +|   0|  0|  13|           6|           6|
+    |icmp_ln250_fu_599_p2      |      icmp|   0|  0|  11|           7|           8|
+    |icmp_ln251_fu_623_p2      |      icmp|   0|  0|   9|           4|           5|
+    |select_ln250_1_fu_637_p3  |    select|   0|  0|   4|           1|           4|
+    |select_ln250_fu_629_p3    |    select|   0|  0|   4|           1|           1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0|  79|          34|          27|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_load               |   9|          2|    4|          8|
+    |ap_sig_allocacmp_indvar_flatten_load  |   9|          2|    7|         14|
+    |ap_sig_allocacmp_j_load               |   9|          2|    4|          8|
+    |i_fu_176                              |   9|          2|    4|          8|
+    |indvar_flatten_fu_180                 |   9|          2|    7|         14|
+    |j_fu_172                              |   9|          2|    4|          8|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 |  63|         14|   31|         62|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+---+----+-----+-----------+
+    |          Name         | FF| LUT| Bits| Const Bits|
+    +-----------------------+---+----+-----+-----------+
+    |ap_CS_fsm              |  1|   0|    1|          0|
+    |ap_done_reg            |  1|   0|    1|          0|
+    |i_fu_176               |  4|   0|    4|          0|
+    |indvar_flatten_fu_180  |  7|   0|    7|          0|
+    |j_fu_172               |  4|   0|    4|          0|
+    +-----------------------+---+----+-----+-----------+
+    |Total                  | 17|   0|   17|          0|
+    +-----------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------+-----+-----+------------+---------------------------------------+--------------+
+|              RTL Ports             | Dir | Bits|  Protocol  |             Source Object             |    C Type    |
++------------------------------------+-----+-----+------------+---------------------------------------+--------------+
+|ap_clk                              |   in|    1|  ap_ctrl_hs|  QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6|  return value|
+|ap_rst                              |   in|    1|  ap_ctrl_hs|  QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6|  return value|
+|ap_start                            |   in|    1|  ap_ctrl_hs|  QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6|  return value|
+|ap_done                             |  out|    1|  ap_ctrl_hs|  QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6|  return value|
+|ap_idle                             |  out|    1|  ap_ctrl_hs|  QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6|  return value|
+|ap_ready                            |  out|    1|  ap_ctrl_hs|  QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6|  return value|
+|R_address0                          |  out|    6|   ap_memory|                                      R|         array|
+|R_ce0                               |  out|    1|   ap_memory|                                      R|         array|
+|R_we0                               |  out|    1|   ap_memory|                                      R|         array|
+|R_d0                                |  out|   16|   ap_memory|                                      R|         array|
+|p_0_0_03279800_lcssa982_reload      |   in|   16|     ap_none|         p_0_0_03279800_lcssa982_reload|        scalar|
+|conv_i_i_i2390896_lcssa1046_reload  |   in|   16|     ap_none|     conv_i_i_i2390896_lcssa1046_reload|        scalar|
+|p_0_0_03279797_lcssa980_reload      |   in|   16|     ap_none|         p_0_0_03279797_lcssa980_reload|        scalar|
+|conv_i_i_i2390893_lcssa1044_reload  |   in|   16|     ap_none|     conv_i_i_i2390893_lcssa1044_reload|        scalar|
+|p_0_0_03279794_lcssa978_reload      |   in|   16|     ap_none|         p_0_0_03279794_lcssa978_reload|        scalar|
+|conv_i_i_i2390890_lcssa1042_reload  |   in|   16|     ap_none|     conv_i_i_i2390890_lcssa1042_reload|        scalar|
+|p_0_0_03279803_lcssa984_reload      |   in|   16|     ap_none|         p_0_0_03279803_lcssa984_reload|        scalar|
+|conv_i_i_i2390899_lcssa1048_reload  |   in|   16|     ap_none|     conv_i_i_i2390899_lcssa1048_reload|        scalar|
+|p_0_0_03278848_lcssa1014_reload     |   in|   16|     ap_none|        p_0_0_03278848_lcssa1014_reload|        scalar|
+|p_0_0_03279944_lcssa1078_reload     |   in|   16|     ap_none|        p_0_0_03279944_lcssa1078_reload|        scalar|
+|p_0_0_03278845_lcssa1012_reload     |   in|   16|     ap_none|        p_0_0_03278845_lcssa1012_reload|        scalar|
+|p_0_0_03279941_lcssa1076_reload     |   in|   16|     ap_none|        p_0_0_03279941_lcssa1076_reload|        scalar|
+|p_0_0_03278842_lcssa1010_reload     |   in|   16|     ap_none|        p_0_0_03278842_lcssa1010_reload|        scalar|
+|p_0_0_03279938_lcssa1074_reload     |   in|   16|     ap_none|        p_0_0_03279938_lcssa1074_reload|        scalar|
+|p_0_0_03278851_lcssa1016_reload     |   in|   16|     ap_none|        p_0_0_03278851_lcssa1016_reload|        scalar|
+|p_0_0_03279947_lcssa1080_reload     |   in|   16|     ap_none|        p_0_0_03279947_lcssa1080_reload|        scalar|
+|p_0_0_03279787_lcssa974_reload      |   in|   16|     ap_none|         p_0_0_03279787_lcssa974_reload|        scalar|
+|conv_i_i_i2390883_lcssa1038_reload  |   in|   16|     ap_none|     conv_i_i_i2390883_lcssa1038_reload|        scalar|
+|p_0_0_03279784_lcssa972_reload      |   in|   16|     ap_none|         p_0_0_03279784_lcssa972_reload|        scalar|
+|conv_i_i_i2390880_lcssa1036_reload  |   in|   16|     ap_none|     conv_i_i_i2390880_lcssa1036_reload|        scalar|
+|p_0_0_03279781_lcssa970_reload      |   in|   16|     ap_none|         p_0_0_03279781_lcssa970_reload|        scalar|
+|conv_i_i_i2390877_lcssa1034_reload  |   in|   16|     ap_none|     conv_i_i_i2390877_lcssa1034_reload|        scalar|
+|p_0_0_03279790_lcssa976_reload      |   in|   16|     ap_none|         p_0_0_03279790_lcssa976_reload|        scalar|
+|conv_i_i_i2390886_lcssa1040_reload  |   in|   16|     ap_none|     conv_i_i_i2390886_lcssa1040_reload|        scalar|
+|p_0_0_03278835_lcssa1006_reload     |   in|   16|     ap_none|        p_0_0_03278835_lcssa1006_reload|        scalar|
+|p_0_0_03279931_lcssa1070_reload     |   in|   16|     ap_none|        p_0_0_03279931_lcssa1070_reload|        scalar|
+|p_0_0_03278832_lcssa1004_reload     |   in|   16|     ap_none|        p_0_0_03278832_lcssa1004_reload|        scalar|
+|p_0_0_03279928_lcssa1068_reload     |   in|   16|     ap_none|        p_0_0_03279928_lcssa1068_reload|        scalar|
+|p_0_0_03278829_lcssa1002_reload     |   in|   16|     ap_none|        p_0_0_03278829_lcssa1002_reload|        scalar|
+|p_0_0_03279925_lcssa1066_reload     |   in|   16|     ap_none|        p_0_0_03279925_lcssa1066_reload|        scalar|
+|p_0_0_03278838_lcssa1008_reload     |   in|   16|     ap_none|        p_0_0_03278838_lcssa1008_reload|        scalar|
+|p_0_0_03279934_lcssa1072_reload     |   in|   16|     ap_none|        p_0_0_03279934_lcssa1072_reload|        scalar|
+|p_0_0_03279775_lcssa966_reload      |   in|   16|     ap_none|         p_0_0_03279775_lcssa966_reload|        scalar|
+|conv_i_i_i2390871_lcssa1030_reload  |   in|   16|     ap_none|     conv_i_i_i2390871_lcssa1030_reload|        scalar|
+|p_0_0_03279772_lcssa964_reload      |   in|   16|     ap_none|         p_0_0_03279772_lcssa964_reload|        scalar|
+|conv_i_i_i2390868_lcssa1028_reload  |   in|   16|     ap_none|     conv_i_i_i2390868_lcssa1028_reload|        scalar|
+|p_0_0_03279769_lcssa962_reload      |   in|   16|     ap_none|         p_0_0_03279769_lcssa962_reload|        scalar|
+|conv_i_i_i2390865_lcssa1026_reload  |   in|   16|     ap_none|     conv_i_i_i2390865_lcssa1026_reload|        scalar|
+|p_0_0_03279778_lcssa968_reload      |   in|   16|     ap_none|         p_0_0_03279778_lcssa968_reload|        scalar|
+|conv_i_i_i2390874_lcssa1032_reload  |   in|   16|     ap_none|     conv_i_i_i2390874_lcssa1032_reload|        scalar|
+|p_0_0_03278823_lcssa998_reload      |   in|   16|     ap_none|         p_0_0_03278823_lcssa998_reload|        scalar|
+|p_0_0_03279919_lcssa1062_reload     |   in|   16|     ap_none|        p_0_0_03279919_lcssa1062_reload|        scalar|
+|p_0_0_03278820_lcssa996_reload      |   in|   16|     ap_none|         p_0_0_03278820_lcssa996_reload|        scalar|
+|p_0_0_03279916_lcssa1060_reload     |   in|   16|     ap_none|        p_0_0_03279916_lcssa1060_reload|        scalar|
+|p_0_0_03278817_lcssa994_reload      |   in|   16|     ap_none|         p_0_0_03278817_lcssa994_reload|        scalar|
+|p_0_0_03279913_lcssa1058_reload     |   in|   16|     ap_none|        p_0_0_03279913_lcssa1058_reload|        scalar|
+|p_0_0_03278826_lcssa1000_reload     |   in|   16|     ap_none|        p_0_0_03278826_lcssa1000_reload|        scalar|
+|p_0_0_03279922_lcssa1064_reload     |   in|   16|     ap_none|        p_0_0_03279922_lcssa1064_reload|        scalar|
+|p_0_0_03279811_lcssa990_reload      |   in|   16|     ap_none|         p_0_0_03279811_lcssa990_reload|        scalar|
+|conv_i_i_i2390907_lcssa1054_reload  |   in|   16|     ap_none|     conv_i_i_i2390907_lcssa1054_reload|        scalar|
+|p_0_0_03279808_lcssa988_reload      |   in|   16|     ap_none|         p_0_0_03279808_lcssa988_reload|        scalar|
+|conv_i_i_i2390904_lcssa1052_reload  |   in|   16|     ap_none|     conv_i_i_i2390904_lcssa1052_reload|        scalar|
+|p_0_0_03279805_lcssa986_reload      |   in|   16|     ap_none|         p_0_0_03279805_lcssa986_reload|        scalar|
+|conv_i_i_i2390901_lcssa1050_reload  |   in|   16|     ap_none|     conv_i_i_i2390901_lcssa1050_reload|        scalar|
+|p_0_0_03279814_lcssa992_reload      |   in|   16|     ap_none|         p_0_0_03279814_lcssa992_reload|        scalar|
+|conv_i_i_i2390910_lcssa1056_reload  |   in|   16|     ap_none|     conv_i_i_i2390910_lcssa1056_reload|        scalar|
+|p_0_0_03278859_lcssa1022_reload     |   in|   16|     ap_none|        p_0_0_03278859_lcssa1022_reload|        scalar|
+|p_0_0_03279955_lcssa1086_reload     |   in|   16|     ap_none|        p_0_0_03279955_lcssa1086_reload|        scalar|
+|p_0_0_03278856_lcssa1020_reload     |   in|   16|     ap_none|        p_0_0_03278856_lcssa1020_reload|        scalar|
+|p_0_0_03279952_lcssa1084_reload     |   in|   16|     ap_none|        p_0_0_03279952_lcssa1084_reload|        scalar|
+|p_0_0_03278853_lcssa1018_reload     |   in|   16|     ap_none|        p_0_0_03278853_lcssa1018_reload|        scalar|
+|p_0_0_03279949_lcssa1082_reload     |   in|   16|     ap_none|        p_0_0_03279949_lcssa1082_reload|        scalar|
+|p_0_0_03278862_lcssa1024_reload     |   in|   16|     ap_none|        p_0_0_03278862_lcssa1024_reload|        scalar|
+|p_0_0_03279958_lcssa1088_reload     |   in|   16|     ap_none|        p_0_0_03279958_lcssa1088_reload|        scalar|
++------------------------------------+-----+-----+------------+---------------------------------------+--------------+
+

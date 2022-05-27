@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1653494145264">
+  <ports id="1" name="H_rvd" type="PortType" coreName="RAM" coreId="1601200416" bitwidth="64" direction="DirInOut" iftype="IfTypeRegister" arraysize="64">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="H_mul_x" type="PortType" coreName="RAM" coreId="1717530721" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="28" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="29" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="30" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="31" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="34" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="36" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="37" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="40" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="41" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="43" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="44" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="45" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="46" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="47" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="50" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="52" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="55" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="56" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@ports.1"/>
+  <edges id="57" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="58" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="59" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="60" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="61" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="62" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="-52" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@ports.0"/>
+  <edges id="-55" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@ports.0"/>
+  <blocks id="18" name="Rayleigh" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="rngMT19937ICN_uniformRNG_mt_odd_0_V" lineNumber="20" originalName="rngMT19937ICN.uniformRNG.mt_odd_0.V" fileName="src/Rayleigh.cpp" fileDirectory=".." rtlName="rngMT19937ICN_uniformRNG_mt_odd_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="Rayleigh" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/Rayleigh.cpp" linenumber="20" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="Rayleigh"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="rngMT19937ICN_1" rtlName="rngMT19937ICN_1_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="rngMT19937ICN_uniformRNG_mt_even_0_V" lineNumber="20" originalName="rngMT19937ICN.uniformRNG.mt_even_0.V" fileName="src/Rayleigh.cpp" fileDirectory=".." rtlName="rngMT19937ICN_uniformRNG_mt_even_0_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="Rayleigh" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/Rayleigh.cpp" linenumber="20" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="Rayleigh"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="rngMT19937ICN_3" rtlName="rngMT19937ICN_3_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="Hr" lineNumber="25" originalName="Hr" fileName="src/Rayleigh.cpp" fileDirectory=".." rtlName="Hr_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="Rayleigh" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/Rayleigh.cpp" linenumber="25" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="Rayleigh"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="Hi" lineNumber="26" originalName="Hi" fileName="src/Rayleigh.cpp" fileDirectory=".." rtlName="Hi_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="Rayleigh" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/Rayleigh.cpp" linenumber="26" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="Rayleigh"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="call_ret" lineNumber="1143" fileName="src/rng.hpp" fileDirectory=".." rtlName="grp_seedInitialization_fu_40" coreId="690628640" contextFuncName="seedInitialization" bitwidth="128" opcode="call" nodeLatency="1" m_display="0" m_delay="2.1" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/rng.hpp" linenumber="1143" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="seedInitialization"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <constName>seedInitialization</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="rngMT19937ICN_uniformRNG_x_k_p_0_V" lineNumber="1143" originalName="rngMT19937ICN.uniformRNG.x_k_p_0.V" fileName="src/rng.hpp" fileDirectory=".." coreId="690628640" contextFuncName="seedInitialization" bitwidth="32" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/rng.hpp" linenumber="1143" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="seedInitialization"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="rngMT19937ICN_uniformRNG_x_k_p_1_V" lineNumber="1143" originalName="rngMT19937ICN.uniformRNG.x_k_p_1.V" fileName="src/rng.hpp" fileDirectory=".." coreId="925966380" contextFuncName="seedInitialization" bitwidth="32" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/rng.hpp" linenumber="1143" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="seedInitialization"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="rngMT19937ICN_uniformRNG_x_k_p_2_V" lineNumber="1143" originalName="rngMT19937ICN.uniformRNG.x_k_p_2.V" fileName="src/rng.hpp" fileDirectory=".." coreId="690628640" contextFuncName="seedInitialization" bitwidth="32" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/rng.hpp" linenumber="1143" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="seedInitialization"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="rngMT19937ICN_uniformRNG_x_k_p_m_V" lineNumber="1143" originalName="rngMT19937ICN.uniformRNG.x_k_p_m.V" fileName="src/rng.hpp" fileDirectory=".." coreId="690628640" contextFuncName="seedInitialization" bitwidth="32" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/rng.hpp" linenumber="1143" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="seedInitialization"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln1143" lineNumber="1143" fileName="src/rng.hpp" fileDirectory=".." rtlName="grp_Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2_fu_54" coreId="690628640" contextFuncName="seedInitialization" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.42" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/rng.hpp" linenumber="1143" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="seedInitialization"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln0" rtlName="grp_Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4_fu_66" coreId="690628640" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>H_rvd</dataInputObjs>
+      <dataOutputObjs>H_rvd</dataOutputObjs>
+      <constName>Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln0" rtlName="grp_Rayleigh_Pipeline_VITIS_LOOP_67_6_fu_74" coreId="925966380" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <dataInputObjs>H_rvd</dataInputObjs>
+      <dataOutputObjs>H_mul_x</dataOutputObjs>
+      <dataOutputObjs>H_rvd</dataOutputObjs>
+      <constName>Rayleigh_Pipeline_VITIS_LOOP_67_6</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln78" lineNumber="78" fileName="src/Rayleigh.cpp" fileDirectory=".." coreId="741487420" contextFuncName="Rayleigh" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/Rayleigh.cpp" linenumber="78" fileDirectory="D:\NTHU\HLS\FINAL\CHANNEL_KBEST" functionName="Rayleigh"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/rng.hpp">
+      <validLinenumbers>1143</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="src/Rayleigh.cpp">
+      <validLinenumbers>20</validLinenumbers>
+      <validLinenumbers>25</validLinenumbers>
+      <validLinenumbers>26</validLinenumbers>
+      <validLinenumbers>78</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <regnodes realName="rngMT19937ICN_uniformRNG_x_k_p_1_V_reg_103">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="rngMT19937ICN_uniformRNG_x_k_p_2_V_reg_108">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="rngMT19937ICN_uniformRNG_x_k_p_0_V_reg_98">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="rngMT19937ICN_uniformRNG_x_k_p_m_V_reg_113">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <expressionNodes realName="rngMT19937ICN_uniformRNG_x_k_p_0_V_fu_82">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rngMT19937ICN_uniformRNG_x_k_p_1_V_fu_86">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rngMT19937ICN_1_alloca_fu_20">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rngMT19937ICN_uniformRNG_x_k_p_m_V_fu_94">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rngMT19937ICN_uniformRNG_x_k_p_2_V_fu_90">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rngMT19937ICN_uniformRNG_mt_odd_0_V_alloca_fu_16">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Hr_alloca_fu_32">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rngMT19937ICN_3_alloca_fu_28">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Hi_alloca_fu_36">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rngMT19937ICN_uniformRNG_mt_even_0_V_alloca_fu_24">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Rayleigh_Pipeline_VITIS_LOOP_67_6_fu_74">
+    <nodeIds>16</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_seedInitialization_fu_40">
+    <nodeIds>9</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4_fu_66">
+    <nodeIds>15</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2_fu_54">
+    <nodeIds>14</nodeIds>
+  </moduleNodes>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="9" stage="1" latency="2"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="14" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="14" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="15" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="15" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="16" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="16" stage="1" latency="2"/>
+      <operations id="17" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Rayleigh" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="809" mMaxLatency="809">
+      <basicBlocks>18</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

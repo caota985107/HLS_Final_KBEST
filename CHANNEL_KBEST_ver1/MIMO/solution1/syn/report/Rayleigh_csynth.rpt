@@ -1,0 +1,352 @@
+
+
+================================================================
+== Vitis HLS Report for 'Rayleigh'
+================================================================
+* Date:           Wed May 25 23:55:44 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  30.00 ns|  21.664 ns|     8.10 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |      809|      809|  24.270 us|  24.270 us|  809|  809|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                             |                                                   |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                           Instance                          |                       Module                      |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_seedInitialization_fu_40                                 |seedInitialization                                 |      629|      629|  18.870 us|  18.870 us|  629|  629|       no|
+        |grp_Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2_fu_54  |Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2  |       89|       89|   2.670 us|   2.670 us|   89|   89|       no|
+        |grp_Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4_fu_66  |Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4  |       34|       34|   1.020 us|   1.020 us|   34|   34|       no|
+        |grp_Rayleigh_Pipeline_VITIS_LOOP_67_6_fu_74                  |Rayleigh_Pipeline_VITIS_LOOP_67_6                  |       50|       50|   1.500 us|   1.500 us|   50|   50|       no|
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       -|       -|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|    28|    7996|    9365|    -|
+|Memory           |       10|     -|       0|       0|    0|
+|Multiplexer      |        -|     -|       -|     616|    -|
+|Register         |        -|     -|     140|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       10|    28|    8136|    9981|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       ~0|     1|       1|       3|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------+---------------------------------------------------+---------+----+------+------+-----+
+    |                           Instance                          |                       Module                      | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------------------------------+---------------------------------------------------+---------+----+------+------+-----+
+    |grp_Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2_fu_54  |Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2  |        0|   0|  5479|  7050|    0|
+    |grp_Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4_fu_66  |Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4  |        0|   0|   157|   302|    0|
+    |grp_Rayleigh_Pipeline_VITIS_LOOP_67_6_fu_74                  |Rayleigh_Pipeline_VITIS_LOOP_67_6                  |        0|  25|  2162|  1610|    0|
+    |grp_seedInitialization_fu_40                                 |seedInitialization                                 |        0|   3|   198|   403|    0|
+    +-------------------------------------------------------------+---------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                        |                                                   |        0|  28|  7996|  9365|    0|
+    +-------------------------------------------------------------+---------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------------------------+------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |                 Memory                 |                           Module                           | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------------------------------+------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Hr_U                                    |Rayleigh_Hr_RAM_AUTO_1R1W                                   |        2|  0|   0|    0|    16|   64|     1|         1024|
+    |Hi_U                                    |Rayleigh_Hr_RAM_AUTO_1R1W                                   |        2|  0|   0|    0|    16|   64|     1|         1024|
+    |rngMT19937ICN_1_U                       |Rayleigh_rngMT19937ICN_1_RAM_AUTO_0R0W                      |        1|  0|   0|    0|   512|   32|     1|        16384|
+    |rngMT19937ICN_3_U                       |Rayleigh_rngMT19937ICN_1_RAM_AUTO_0R0W                      |        1|  0|   0|    0|   512|   32|     1|        16384|
+    |rngMT19937ICN_uniformRNG_mt_odd_0_V_U   |Rayleigh_rngMT19937ICN_uniformRNG_mt_odd_0_V_RAM_AUTO_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
+    |rngMT19937ICN_uniformRNG_mt_even_0_V_U  |Rayleigh_rngMT19937ICN_uniformRNG_mt_odd_0_V_RAM_AUTO_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
+    +----------------------------------------+------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                                   |                                                            |       10|  0|   0|    0|  2080|  256|     6|        67584|
+    +----------------------------------------+------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                     | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |H_rvd_address0                                 |  14|          3|    6|         18|
+    |H_rvd_address1                                 |  14|          3|    6|         18|
+    |H_rvd_ce0                                      |  14|          3|    1|          3|
+    |H_rvd_ce1                                      |  14|          3|    1|          3|
+    |H_rvd_we0                                      |   9|          2|    1|          2|
+    |H_rvd_we1                                      |   9|          2|    1|          2|
+    |Hi_address0                                    |  14|          3|    4|         12|
+    |Hi_ce0                                         |  14|          3|    1|          3|
+    |Hi_we0                                         |   9|          2|    1|          2|
+    |Hr_address0                                    |  14|          3|    4|         12|
+    |Hr_ce0                                         |  14|          3|    1|          3|
+    |Hr_we0                                         |   9|          2|    1|          2|
+    |ap_NS_fsm                                      |  49|          9|    1|          9|
+    |grp_fu_118_ce                                  |   9|          2|    1|          2|
+    |grp_fu_122_ce                                  |   9|          2|    1|          2|
+    |grp_fu_126_ce                                  |   9|          2|    1|          2|
+    |grp_fu_130_ce                                  |   9|          2|    1|          2|
+    |grp_fu_134_ce                                  |   9|          2|    1|          2|
+    |grp_fu_138_ce                                  |   9|          2|    1|          2|
+    |grp_fu_142_ce                                  |   9|          2|    1|          2|
+    |grp_fu_146_ce                                  |   9|          2|    1|          2|
+    |grp_fu_150_ce                                  |   9|          2|    1|          2|
+    |grp_fu_154_ce                                  |   9|          2|    1|          2|
+    |grp_fu_158_ce                                  |   9|          2|    1|          2|
+    |grp_fu_162_ce                                  |   9|          2|    1|          2|
+    |grp_fu_166_ce                                  |   9|          2|    1|          2|
+    |grp_fu_170_ce                                  |   9|          2|    1|          2|
+    |grp_fu_174_ce                                  |   9|          2|    1|          2|
+    |grp_fu_178_ce                                  |   9|          2|    1|          2|
+    |grp_fu_182_ce                                  |   9|          2|    1|          2|
+    |grp_fu_186_ce                                  |   9|          2|    1|          2|
+    |grp_fu_190_ce                                  |   9|          2|    1|          2|
+    |grp_fu_194_ce                                  |   9|          2|    1|          2|
+    |grp_fu_198_ce                                  |   9|          2|    1|          2|
+    |grp_fu_202_ce                                  |   9|          2|    1|          2|
+    |grp_fu_206_ce                                  |   9|          2|    1|          2|
+    |grp_fu_210_ce                                  |   9|          2|    1|          2|
+    |grp_fu_214_ce                                  |   9|          2|    1|          2|
+    |grp_fu_218_ce                                  |   9|          2|    1|          2|
+    |grp_fu_222_ce                                  |   9|          2|    1|          2|
+    |grp_fu_226_ce                                  |   9|          2|    1|          2|
+    |grp_fu_230_ce                                  |   9|          2|    1|          2|
+    |grp_fu_234_ce                                  |   9|          2|    1|          2|
+    |rngMT19937ICN_uniformRNG_mt_even_0_V_address0  |  14|          3|    9|         27|
+    |rngMT19937ICN_uniformRNG_mt_even_0_V_ce0       |  14|          3|    1|          3|
+    |rngMT19937ICN_uniformRNG_mt_even_0_V_ce1       |   9|          2|    1|          2|
+    |rngMT19937ICN_uniformRNG_mt_even_0_V_d0        |  14|          3|   32|         96|
+    |rngMT19937ICN_uniformRNG_mt_even_0_V_we0       |  14|          3|    1|          3|
+    |rngMT19937ICN_uniformRNG_mt_odd_0_V_address0   |  14|          3|    9|         27|
+    |rngMT19937ICN_uniformRNG_mt_odd_0_V_address1   |  14|          3|    9|         27|
+    |rngMT19937ICN_uniformRNG_mt_odd_0_V_ce0        |  14|          3|    1|          3|
+    |rngMT19937ICN_uniformRNG_mt_odd_0_V_ce1        |  14|          3|    1|          3|
+    |rngMT19937ICN_uniformRNG_mt_odd_0_V_d0         |  14|          3|   32|         96|
+    |rngMT19937ICN_uniformRNG_mt_odd_0_V_we0        |  14|          3|    1|          3|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                          | 616|        133|  156|        439|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                   Name                                   | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                 |   8|   0|    8|          0|
+    |grp_Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2_fu_54_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4_fu_66_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Rayleigh_Pipeline_VITIS_LOOP_67_6_fu_74_ap_start_reg                  |   1|   0|    1|          0|
+    |grp_seedInitialization_fu_40_ap_start_reg                                 |   1|   0|    1|          0|
+    |rngMT19937ICN_uniformRNG_x_k_p_0_V_reg_98                                 |  32|   0|   32|          0|
+    |rngMT19937ICN_uniformRNG_x_k_p_1_V_reg_103                                |  32|   0|   32|          0|
+    |rngMT19937ICN_uniformRNG_x_k_p_2_V_reg_108                                |  32|   0|   32|          0|
+    |rngMT19937ICN_uniformRNG_x_k_p_m_V_reg_113                                |  32|   0|   32|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                     | 140|   0|  140|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_965_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_965_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_965_p_opcode   |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_965_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_965_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_969_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_969_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_969_p_opcode   |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_969_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_969_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_973_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_973_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_973_p_opcode   |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_973_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_973_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_977_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_977_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_977_p_opcode   |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_977_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_977_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_981_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_981_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_981_p_opcode   |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_981_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_981_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_985_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_985_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_985_p_opcode   |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_985_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_985_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_989_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_989_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_989_p_opcode   |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_989_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_989_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_993_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_993_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_993_p_opcode   |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_993_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_993_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_997_p_din0     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_997_p_din1     |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_997_p_opcode   |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_997_p_dout0    |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_997_p_ce       |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1001_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1001_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1001_p_opcode  |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1001_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1001_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1005_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1005_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1005_p_opcode  |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1005_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1005_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1009_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1009_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1009_p_opcode  |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1009_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1009_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1013_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1013_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1013_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1013_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1017_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1017_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1017_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1017_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1021_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1021_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1021_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1021_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1025_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1025_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1025_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1025_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1029_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1029_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1029_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1029_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1033_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1033_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1033_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1033_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1037_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1037_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1037_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1037_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1041_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1041_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1041_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1041_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1045_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1045_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1045_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1045_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1049_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1049_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1049_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1049_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1053_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1053_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1053_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1053_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1057_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1057_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1057_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1057_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1061_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1061_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1061_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1061_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1065_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1065_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1065_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1065_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1069_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1069_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1069_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1069_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1073_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1073_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1073_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1073_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1077_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1077_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1077_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1077_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1081_p_din0    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1081_p_din1    |  out|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1081_p_opcode  |  out|    2|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1081_p_dout0   |   in|   64|  ap_ctrl_hs|      Rayleigh|  return value|
+|grp_fu_1081_p_ce      |  out|    1|  ap_ctrl_hs|      Rayleigh|  return value|
+|H_rvd_address0        |  out|    6|   ap_memory|         H_rvd|         array|
+|H_rvd_ce0             |  out|    1|   ap_memory|         H_rvd|         array|
+|H_rvd_we0             |  out|    1|   ap_memory|         H_rvd|         array|
+|H_rvd_d0              |  out|   64|   ap_memory|         H_rvd|         array|
+|H_rvd_q0              |   in|   64|   ap_memory|         H_rvd|         array|
+|H_rvd_address1        |  out|    6|   ap_memory|         H_rvd|         array|
+|H_rvd_ce1             |  out|    1|   ap_memory|         H_rvd|         array|
+|H_rvd_we1             |  out|    1|   ap_memory|         H_rvd|         array|
+|H_rvd_d1              |  out|   64|   ap_memory|         H_rvd|         array|
+|H_rvd_q1              |   in|   64|   ap_memory|         H_rvd|         array|
+|H_mul_x_address0      |  out|    3|   ap_memory|       H_mul_x|         array|
+|H_mul_x_ce0           |  out|    1|   ap_memory|       H_mul_x|         array|
+|H_mul_x_we0           |  out|    1|   ap_memory|       H_mul_x|         array|
+|H_mul_x_d0            |  out|   64|   ap_memory|       H_mul_x|         array|
++----------------------+-----+-----+------------+--------------+--------------+
+

@@ -1,0 +1,457 @@
+
+
+================================================================
+== Vitis HLS Report for 'QRD_Pipeline_VITIS_LOOP_316_9_VITIS_LOOP_317_10'
+================================================================
+* Date:           Wed May 25 23:55:20 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  30.00 ns|  2.444 ns|     8.10 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       75|       75|  2.250 us|  2.250 us|   75|   75|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |               Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_316_9_VITIS_LOOP_317_10  |       73|       73|        11|          1|          1|    64|       yes|
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 11, States = { 1 2 3 4 5 6 7 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.44>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 14 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 15 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%indvar_flatten7 = alloca i32 1"   --->   Operation 16 'alloca' 'indvar_flatten7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%Y_7_load_7_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_7_load_7"   --->   Operation 17 'read' 'Y_7_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%Y_6_load_7_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_6_load_7"   --->   Operation 18 'read' 'Y_6_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%Y_5_load_7_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_5_load_7"   --->   Operation 19 'read' 'Y_5_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%Y_4_load_7_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_4_load_7"   --->   Operation 20 'read' 'Y_4_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%Y_3_load_7_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_3_load_7"   --->   Operation 21 'read' 'Y_3_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%Y_2_load_7_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_2_load_7"   --->   Operation 22 'read' 'Y_2_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%Y_1_load_7_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_1_load_7"   --->   Operation 23 'read' 'Y_1_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%Y_0_load_7_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_0_load_7"   --->   Operation 24 'read' 'Y_0_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%Y_7_load_6_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_7_load_6"   --->   Operation 25 'read' 'Y_7_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%Y_6_load_6_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_6_load_6"   --->   Operation 26 'read' 'Y_6_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%Y_5_load_6_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_5_load_6"   --->   Operation 27 'read' 'Y_5_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%Y_4_load_6_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_4_load_6"   --->   Operation 28 'read' 'Y_4_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%Y_3_load_6_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_3_load_6"   --->   Operation 29 'read' 'Y_3_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%Y_2_load_6_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_2_load_6"   --->   Operation 30 'read' 'Y_2_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%Y_1_load_6_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_1_load_6"   --->   Operation 31 'read' 'Y_1_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%Y_0_load_6_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_0_load_6"   --->   Operation 32 'read' 'Y_0_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%Y_7_load_5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_7_load_5"   --->   Operation 33 'read' 'Y_7_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%Y_6_load_5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_6_load_5"   --->   Operation 34 'read' 'Y_6_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%Y_5_load_5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_5_load_5"   --->   Operation 35 'read' 'Y_5_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%Y_4_load_5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_4_load_5"   --->   Operation 36 'read' 'Y_4_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%Y_3_load_5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_3_load_5"   --->   Operation 37 'read' 'Y_3_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%Y_2_load_5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_2_load_5"   --->   Operation 38 'read' 'Y_2_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%Y_1_load_5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_1_load_5"   --->   Operation 39 'read' 'Y_1_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%Y_0_load_5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_0_load_5"   --->   Operation 40 'read' 'Y_0_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%Y_7_load_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_7_load_4"   --->   Operation 41 'read' 'Y_7_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%Y_6_load_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_6_load_4"   --->   Operation 42 'read' 'Y_6_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%Y_5_load_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_5_load_4"   --->   Operation 43 'read' 'Y_5_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%Y_4_load_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_4_load_4"   --->   Operation 44 'read' 'Y_4_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%Y_3_load_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_3_load_4"   --->   Operation 45 'read' 'Y_3_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%Y_2_load_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_2_load_4"   --->   Operation 46 'read' 'Y_2_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%Y_1_load_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_1_load_4"   --->   Operation 47 'read' 'Y_1_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%Y_0_load_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_0_load_4"   --->   Operation 48 'read' 'Y_0_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%Y_7_load_3_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_7_load_3"   --->   Operation 49 'read' 'Y_7_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%Y_6_load_3_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_6_load_3"   --->   Operation 50 'read' 'Y_6_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%Y_5_load_3_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_5_load_3"   --->   Operation 51 'read' 'Y_5_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%Y_4_load_3_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_4_load_3"   --->   Operation 52 'read' 'Y_4_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%Y_3_load_3_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_3_load_3"   --->   Operation 53 'read' 'Y_3_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%Y_2_load_3_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_2_load_3"   --->   Operation 54 'read' 'Y_2_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%Y_1_load_3_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_1_load_3"   --->   Operation 55 'read' 'Y_1_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%Y_0_load_3_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_0_load_3"   --->   Operation 56 'read' 'Y_0_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%Y_7_load_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_7_load_2"   --->   Operation 57 'read' 'Y_7_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%Y_6_load_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_6_load_2"   --->   Operation 58 'read' 'Y_6_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%Y_5_load_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_5_load_2"   --->   Operation 59 'read' 'Y_5_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%Y_4_load_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_4_load_2"   --->   Operation 60 'read' 'Y_4_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%Y_3_load_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_3_load_2"   --->   Operation 61 'read' 'Y_3_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%Y_2_load_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_2_load_2"   --->   Operation 62 'read' 'Y_2_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%Y_1_load_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_1_load_2"   --->   Operation 63 'read' 'Y_1_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%Y_0_load_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_0_load_2"   --->   Operation 64 'read' 'Y_0_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%Y_7_load_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_7_load_1"   --->   Operation 65 'read' 'Y_7_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%Y_6_load_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_6_load_1"   --->   Operation 66 'read' 'Y_6_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%Y_5_load_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_5_load_1"   --->   Operation 67 'read' 'Y_5_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%Y_4_load_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_4_load_1"   --->   Operation 68 'read' 'Y_4_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%Y_3_load_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_3_load_1"   --->   Operation 69 'read' 'Y_3_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%Y_2_load_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_2_load_1"   --->   Operation 70 'read' 'Y_2_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%Y_1_load_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_1_load_1"   --->   Operation 71 'read' 'Y_1_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%Y_0_load_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_0_load_1"   --->   Operation 72 'read' 'Y_0_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%Y_7_load_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_7_load"   --->   Operation 73 'read' 'Y_7_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%Y_6_load_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_6_load"   --->   Operation 74 'read' 'Y_6_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%Y_5_load_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_5_load"   --->   Operation 75 'read' 'Y_5_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%Y_4_load_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_4_load"   --->   Operation 76 'read' 'Y_4_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%Y_3_load_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_3_load"   --->   Operation 77 'read' 'Y_3_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%Y_2_load_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_2_load"   --->   Operation 78 'read' 'Y_2_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%Y_1_load_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_1_load"   --->   Operation 79 'read' 'Y_1_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%Y_0_load_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %Y_0_load"   --->   Operation 80 'read' 'Y_0_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%conv_i_i_i735509_lcssa768_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i735509_lcssa768"   --->   Operation 81 'read' 'conv_i_i_i735509_lcssa768_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%conv_i_i_i781477_lcssa752_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i781477_lcssa752"   --->   Operation 82 'read' 'conv_i_i_i781477_lcssa752_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%conv_i_i_i827445_lcssa736_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i827445_lcssa736"   --->   Operation 83 'read' 'conv_i_i_i827445_lcssa736_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%conv_i_i_i873413_lcssa720_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i873413_lcssa720"   --->   Operation 84 'read' 'conv_i_i_i873413_lcssa720_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%conv_i_i_i919381_lcssa704_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i919381_lcssa704"   --->   Operation 85 'read' 'conv_i_i_i919381_lcssa704_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%conv_i_i_i965349_lcssa688_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i965349_lcssa688"   --->   Operation 86 'read' 'conv_i_i_i965349_lcssa688_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%conv_i_i_i1011317_lcssa672_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i1011317_lcssa672"   --->   Operation 87 'read' 'conv_i_i_i1011317_lcssa672_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%conv_i_i_i105729_lcssa528_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i105729_lcssa528"   --->   Operation 88 'read' 'conv_i_i_i105729_lcssa528_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%conv_i_i_i735505_lcssa766_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i735505_lcssa766"   --->   Operation 89 'read' 'conv_i_i_i735505_lcssa766_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%conv_i_i_i781473_lcssa750_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i781473_lcssa750"   --->   Operation 90 'read' 'conv_i_i_i781473_lcssa750_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%conv_i_i_i827441_lcssa734_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i827441_lcssa734"   --->   Operation 91 'read' 'conv_i_i_i827441_lcssa734_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%conv_i_i_i873409_lcssa718_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i873409_lcssa718"   --->   Operation 92 'read' 'conv_i_i_i873409_lcssa718_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%conv_i_i_i919377_lcssa702_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i919377_lcssa702"   --->   Operation 93 'read' 'conv_i_i_i919377_lcssa702_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%conv_i_i_i965345_lcssa686_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i965345_lcssa686"   --->   Operation 94 'read' 'conv_i_i_i965345_lcssa686_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%conv_i_i_i1011313_lcssa670_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i1011313_lcssa670"   --->   Operation 95 'read' 'conv_i_i_i1011313_lcssa670_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%conv_i_i_i105725_lcssa526_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i105725_lcssa526"   --->   Operation 96 'read' 'conv_i_i_i105725_lcssa526_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%conv_i_i_i735501_lcssa764_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i735501_lcssa764"   --->   Operation 97 'read' 'conv_i_i_i735501_lcssa764_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%conv_i_i_i781469_lcssa748_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i781469_lcssa748"   --->   Operation 98 'read' 'conv_i_i_i781469_lcssa748_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%conv_i_i_i827437_lcssa732_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i827437_lcssa732"   --->   Operation 99 'read' 'conv_i_i_i827437_lcssa732_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%conv_i_i_i873405_lcssa716_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i873405_lcssa716"   --->   Operation 100 'read' 'conv_i_i_i873405_lcssa716_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%conv_i_i_i919373_lcssa700_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i919373_lcssa700"   --->   Operation 101 'read' 'conv_i_i_i919373_lcssa700_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%conv_i_i_i965341_lcssa684_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i965341_lcssa684"   --->   Operation 102 'read' 'conv_i_i_i965341_lcssa684_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%conv_i_i_i1011309_lcssa668_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i1011309_lcssa668"   --->   Operation 103 'read' 'conv_i_i_i1011309_lcssa668_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%conv_i_i_i105721_lcssa524_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i105721_lcssa524"   --->   Operation 104 'read' 'conv_i_i_i105721_lcssa524_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%conv_i_i_i735497_lcssa762_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i735497_lcssa762"   --->   Operation 105 'read' 'conv_i_i_i735497_lcssa762_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%conv_i_i_i781465_lcssa746_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i781465_lcssa746"   --->   Operation 106 'read' 'conv_i_i_i781465_lcssa746_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%conv_i_i_i827433_lcssa730_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i827433_lcssa730"   --->   Operation 107 'read' 'conv_i_i_i827433_lcssa730_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%conv_i_i_i873401_lcssa714_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i873401_lcssa714"   --->   Operation 108 'read' 'conv_i_i_i873401_lcssa714_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%conv_i_i_i919369_lcssa698_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i919369_lcssa698"   --->   Operation 109 'read' 'conv_i_i_i919369_lcssa698_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%conv_i_i_i965337_lcssa682_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i965337_lcssa682"   --->   Operation 110 'read' 'conv_i_i_i965337_lcssa682_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%conv_i_i_i1011305_lcssa666_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i1011305_lcssa666"   --->   Operation 111 'read' 'conv_i_i_i1011305_lcssa666_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%conv_i_i_i105717_lcssa522_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i105717_lcssa522"   --->   Operation 112 'read' 'conv_i_i_i105717_lcssa522_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%conv_i_i_i735493_lcssa760_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i735493_lcssa760"   --->   Operation 113 'read' 'conv_i_i_i735493_lcssa760_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%conv_i_i_i781461_lcssa744_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i781461_lcssa744"   --->   Operation 114 'read' 'conv_i_i_i781461_lcssa744_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%conv_i_i_i827429_lcssa728_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i827429_lcssa728"   --->   Operation 115 'read' 'conv_i_i_i827429_lcssa728_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%conv_i_i_i873397_lcssa712_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i873397_lcssa712"   --->   Operation 116 'read' 'conv_i_i_i873397_lcssa712_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%conv_i_i_i919365_lcssa696_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i919365_lcssa696"   --->   Operation 117 'read' 'conv_i_i_i919365_lcssa696_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%conv_i_i_i965333_lcssa680_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i965333_lcssa680"   --->   Operation 118 'read' 'conv_i_i_i965333_lcssa680_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%conv_i_i_i1011301_lcssa664_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i1011301_lcssa664"   --->   Operation 119 'read' 'conv_i_i_i1011301_lcssa664_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%conv_i_i_i105713_lcssa520_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i105713_lcssa520"   --->   Operation 120 'read' 'conv_i_i_i105713_lcssa520_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%conv_i_i_i735489_lcssa758_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i735489_lcssa758"   --->   Operation 121 'read' 'conv_i_i_i735489_lcssa758_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%conv_i_i_i781457_lcssa742_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i781457_lcssa742"   --->   Operation 122 'read' 'conv_i_i_i781457_lcssa742_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%conv_i_i_i827425_lcssa726_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i827425_lcssa726"   --->   Operation 123 'read' 'conv_i_i_i827425_lcssa726_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%conv_i_i_i873393_lcssa710_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i873393_lcssa710"   --->   Operation 124 'read' 'conv_i_i_i873393_lcssa710_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%conv_i_i_i919361_lcssa694_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i919361_lcssa694"   --->   Operation 125 'read' 'conv_i_i_i919361_lcssa694_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%conv_i_i_i965329_lcssa678_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i965329_lcssa678"   --->   Operation 126 'read' 'conv_i_i_i965329_lcssa678_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%conv_i_i_i1011297_lcssa662_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i1011297_lcssa662"   --->   Operation 127 'read' 'conv_i_i_i1011297_lcssa662_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%conv_i_i_i10579_lcssa518_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i10579_lcssa518"   --->   Operation 128 'read' 'conv_i_i_i10579_lcssa518_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%conv_i_i_i735485_lcssa756_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i735485_lcssa756"   --->   Operation 129 'read' 'conv_i_i_i735485_lcssa756_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%conv_i_i_i781453_lcssa740_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i781453_lcssa740"   --->   Operation 130 'read' 'conv_i_i_i781453_lcssa740_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%conv_i_i_i827421_lcssa724_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i827421_lcssa724"   --->   Operation 131 'read' 'conv_i_i_i827421_lcssa724_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%conv_i_i_i873389_lcssa708_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i873389_lcssa708"   --->   Operation 132 'read' 'conv_i_i_i873389_lcssa708_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%conv_i_i_i919357_lcssa692_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i919357_lcssa692"   --->   Operation 133 'read' 'conv_i_i_i919357_lcssa692_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%conv_i_i_i965325_lcssa676_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i965325_lcssa676"   --->   Operation 134 'read' 'conv_i_i_i965325_lcssa676_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%conv_i_i_i1011293_lcssa660_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i1011293_lcssa660"   --->   Operation 135 'read' 'conv_i_i_i1011293_lcssa660_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%conv_i_i_i10575_lcssa516_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i10575_lcssa516"   --->   Operation 136 'read' 'conv_i_i_i10575_lcssa516_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%conv_i_i_i735481_lcssa754_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i735481_lcssa754"   --->   Operation 137 'read' 'conv_i_i_i735481_lcssa754_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%conv_i_i_i781449_lcssa738_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i781449_lcssa738"   --->   Operation 138 'read' 'conv_i_i_i781449_lcssa738_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%conv_i_i_i827417_lcssa722_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i827417_lcssa722"   --->   Operation 139 'read' 'conv_i_i_i827417_lcssa722_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%conv_i_i_i873385_lcssa706_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i873385_lcssa706"   --->   Operation 140 'read' 'conv_i_i_i873385_lcssa706_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%conv_i_i_i919353_lcssa690_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i919353_lcssa690"   --->   Operation 141 'read' 'conv_i_i_i919353_lcssa690_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%conv_i_i_i965321_lcssa674_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i965321_lcssa674"   --->   Operation 142 'read' 'conv_i_i_i965321_lcssa674_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%conv_i_i_i1011289_lcssa658_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i1011289_lcssa658"   --->   Operation 143 'read' 'conv_i_i_i1011289_lcssa658_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%conv_i_i_i10571_lcssa514_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_i10571_lcssa514"   --->   Operation 144 'read' 'conv_i_i_i10571_lcssa514_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %indvar_flatten7"   --->   Operation 145 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 146 [1/1] (0.42ns)   --->   "%store_ln0 = store i4 0, i4 %i"   --->   Operation 146 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 147 [1/1] (0.42ns)   --->   "%store_ln0 = store i4 0, i4 %j"   --->   Operation 147 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 148 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%indvar_flatten7_load = load i7 %indvar_flatten7" [src/QRD.cpp:316]   --->   Operation 149 'load' 'indvar_flatten7_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 150 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.81ns)   --->   "%icmp_ln316 = icmp_eq  i7 %indvar_flatten7_load, i7 64" [src/QRD.cpp:316]   --->   Operation 151 'icmp' 'icmp_ln316' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 152 [1/1] (0.77ns)   --->   "%add_ln316_1 = add i7 %indvar_flatten7_load, i7 1" [src/QRD.cpp:316]   --->   Operation 152 'add' 'add_ln316_1' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%br_ln316 = br i1 %icmp_ln316, void %.preheader, void %.exitStub" [src/QRD.cpp:316]   --->   Operation 153 'br' 'br_ln316' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%j_load = load i4 %j" [src/QRD.cpp:317]   --->   Operation 154 'load' 'j_load' <Predicate = (!icmp_ln316)> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%i_load = load i4 %i" [src/QRD.cpp:316]   --->   Operation 155 'load' 'i_load' <Predicate = (!icmp_ln316)> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.79ns)   --->   "%add_ln316 = add i4 %i_load, i4 1" [src/QRD.cpp:316]   --->   Operation 156 'add' 'add_ln316' <Predicate = (!icmp_ln316)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 157 [1/1] (0.72ns)   --->   "%icmp_ln317 = icmp_eq  i4 %j_load, i4 8" [src/QRD.cpp:317]   --->   Operation 157 'icmp' 'icmp_ln317' <Predicate = (!icmp_ln316)> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 158 [1/1] (0.39ns)   --->   "%select_ln316 = select i1 %icmp_ln317, i4 0, i4 %j_load" [src/QRD.cpp:316]   --->   Operation 158 'select' 'select_ln316' <Predicate = (!icmp_ln316)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 159 [1/1] (0.39ns)   --->   "%select_ln316_1 = select i1 %icmp_ln317, i4 %add_ln316, i4 %i_load" [src/QRD.cpp:316]   --->   Operation 159 'select' 'select_ln316_1' <Predicate = (!icmp_ln316)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%empty_286 = trunc i4 %select_ln316_1" [src/QRD.cpp:316]   --->   Operation 160 'trunc' 'empty_286' <Predicate = (!icmp_ln316)> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.72ns)   --->   "%tmp_17 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %conv_i_i_i10571_lcssa514_read, i16 %conv_i_i_i1011289_lcssa658_read, i16 %conv_i_i_i965321_lcssa674_read, i16 %conv_i_i_i919353_lcssa690_read, i16 %conv_i_i_i873385_lcssa706_read, i16 %conv_i_i_i827417_lcssa722_read, i16 %conv_i_i_i781449_lcssa738_read, i16 %conv_i_i_i735481_lcssa754_read, i4 %select_ln316"   --->   Operation 161 'mux' 'tmp_17' <Predicate = (!icmp_ln316)> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 162 [1/1] (0.72ns)   --->   "%tmp_25 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %Y_0_load_read, i16 %Y_1_load_read, i16 %Y_2_load_read, i16 %Y_3_load_read, i16 %Y_4_load_read, i16 %Y_5_load_read, i16 %Y_6_load_read, i16 %Y_7_load_read, i4 %select_ln316_1"   --->   Operation 162 'mux' 'tmp_25' <Predicate = (!icmp_ln316)> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%sext_ln717 = sext i16 %tmp_25"   --->   Operation 163 'sext' 'sext_ln717' <Predicate = (!icmp_ln316)> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%sext_ln717_2 = sext i16 %tmp_17"   --->   Operation 164 'sext' 'sext_ln717_2' <Predicate = (!icmp_ln316)> <Delay = 0.00>
+ST_1 : Operation 165 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln717 = mul i24 %sext_ln717_2, i24 %sext_ln717"   --->   Operation 165 'mul' 'mul_ln717' <Predicate = (!icmp_ln316)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 166 [1/1] (0.79ns)   --->   "%add_ln317 = add i4 %select_ln316, i4 1" [src/QRD.cpp:317]   --->   Operation 166 'add' 'add_ln317' <Predicate = (!icmp_ln316)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 167 [1/1] (0.42ns)   --->   "%store_ln316 = store i7 %add_ln316_1, i7 %indvar_flatten7" [src/QRD.cpp:316]   --->   Operation 167 'store' 'store_ln316' <Predicate = (!icmp_ln316)> <Delay = 0.42>
+ST_1 : Operation 168 [1/1] (0.42ns)   --->   "%store_ln316 = store i4 %select_ln316_1, i4 %i" [src/QRD.cpp:316]   --->   Operation 168 'store' 'store_ln316' <Predicate = (!icmp_ln316)> <Delay = 0.42>
+ST_1 : Operation 169 [1/1] (0.42ns)   --->   "%store_ln317 = store i4 %add_ln317, i4 %j" [src/QRD.cpp:317]   --->   Operation 169 'store' 'store_ln317' <Predicate = (!icmp_ln316)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.71>
+ST_2 : Operation 170 [1/1] (0.72ns)   --->   "%tmp_18 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %conv_i_i_i10575_lcssa516_read, i16 %conv_i_i_i1011293_lcssa660_read, i16 %conv_i_i_i965325_lcssa676_read, i16 %conv_i_i_i919357_lcssa692_read, i16 %conv_i_i_i873389_lcssa708_read, i16 %conv_i_i_i827421_lcssa724_read, i16 %conv_i_i_i781453_lcssa740_read, i16 %conv_i_i_i735485_lcssa756_read, i4 %select_ln316"   --->   Operation 170 'mux' 'tmp_18' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 171 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln717 = mul i24 %sext_ln717_2, i24 %sext_ln717"   --->   Operation 171 'mul' 'mul_ln717' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 172 [1/1] (0.72ns)   --->   "%tmp_98_1 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %Y_0_load_1_read, i16 %Y_1_load_1_read, i16 %Y_2_load_1_read, i16 %Y_3_load_1_read, i16 %Y_4_load_1_read, i16 %Y_5_load_1_read, i16 %Y_6_load_1_read, i16 %Y_7_load_1_read, i4 %select_ln316_1"   --->   Operation 172 'mux' 'tmp_98_1' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 173 [1/1] (0.00ns)   --->   "%sext_ln1245 = sext i16 %tmp_98_1"   --->   Operation 173 'sext' 'sext_ln1245' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 174 [1/1] (0.00ns)   --->   "%sext_ln1245_14 = sext i16 %tmp_18"   --->   Operation 174 'sext' 'sext_ln1245_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 175 [3/3] (0.99ns) (grouped into DSP with root node add_ln1245)   --->   "%mul_ln1245 = mul i24 %sext_ln1245_14, i24 %sext_ln1245"   --->   Operation 175 'mul' 'mul_ln1245' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 1.71>
+ST_3 : Operation 176 [1/1] (0.72ns)   --->   "%tmp_19 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %conv_i_i_i10579_lcssa518_read, i16 %conv_i_i_i1011297_lcssa662_read, i16 %conv_i_i_i965329_lcssa678_read, i16 %conv_i_i_i919361_lcssa694_read, i16 %conv_i_i_i873393_lcssa710_read, i16 %conv_i_i_i827425_lcssa726_read, i16 %conv_i_i_i781457_lcssa742_read, i16 %conv_i_i_i735489_lcssa758_read, i4 %select_ln316"   --->   Operation 176 'mux' 'tmp_19' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 177 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln717 = mul i24 %sext_ln717_2, i24 %sext_ln717"   --->   Operation 177 'mul' 'mul_ln717' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 178 [2/3] (0.99ns) (grouped into DSP with root node add_ln1245)   --->   "%mul_ln1245 = mul i24 %sext_ln1245_14, i24 %sext_ln1245"   --->   Operation 178 'mul' 'mul_ln1245' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 179 [1/1] (0.72ns)   --->   "%tmp_98_2 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %Y_0_load_2_read, i16 %Y_1_load_2_read, i16 %Y_2_load_2_read, i16 %Y_3_load_2_read, i16 %Y_4_load_2_read, i16 %Y_5_load_2_read, i16 %Y_6_load_2_read, i16 %Y_7_load_2_read, i4 %select_ln316_1"   --->   Operation 179 'mux' 'tmp_98_2' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 180 [1/1] (0.00ns)   --->   "%sext_ln1245_15 = sext i16 %tmp_98_2"   --->   Operation 180 'sext' 'sext_ln1245_15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 181 [1/1] (0.00ns)   --->   "%sext_ln1245_16 = sext i16 %tmp_19"   --->   Operation 181 'sext' 'sext_ln1245_16' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 182 [3/3] (0.99ns) (grouped into DSP with root node add_ln1245_7)   --->   "%mul_ln1245_7 = mul i24 %sext_ln1245_16, i24 %sext_ln1245_15"   --->   Operation 182 'mul' 'mul_ln1245_7' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 1.71>
+ST_4 : Operation 183 [1/1] (0.72ns)   --->   "%tmp_20 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %conv_i_i_i105713_lcssa520_read, i16 %conv_i_i_i1011301_lcssa664_read, i16 %conv_i_i_i965333_lcssa680_read, i16 %conv_i_i_i919365_lcssa696_read, i16 %conv_i_i_i873397_lcssa712_read, i16 %conv_i_i_i827429_lcssa728_read, i16 %conv_i_i_i781461_lcssa744_read, i16 %conv_i_i_i735493_lcssa760_read, i4 %select_ln316"   --->   Operation 183 'mux' 'tmp_20' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 184 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln717 = mul i24 %sext_ln717_2, i24 %sext_ln717"   --->   Operation 184 'mul' 'mul_ln717' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 185 [1/3] (0.00ns) (grouped into DSP with root node add_ln1245)   --->   "%mul_ln1245 = mul i24 %sext_ln1245_14, i24 %sext_ln1245"   --->   Operation 185 'mul' 'mul_ln1245' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 186 [1/1] (0.00ns)   --->   "%tmp_s = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %mul_ln717, i32 8, i32 23"   --->   Operation 186 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 187 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i16.i8, i16 %tmp_s, i8 0"   --->   Operation 187 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 188 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245 = add i24 %shl_ln, i24 %mul_ln1245"   --->   Operation 188 'add' 'add_ln1245' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 189 [2/3] (0.99ns) (grouped into DSP with root node add_ln1245_7)   --->   "%mul_ln1245_7 = mul i24 %sext_ln1245_16, i24 %sext_ln1245_15"   --->   Operation 189 'mul' 'mul_ln1245_7' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 190 [1/1] (0.72ns)   --->   "%tmp_98_3 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %Y_0_load_3_read, i16 %Y_1_load_3_read, i16 %Y_2_load_3_read, i16 %Y_3_load_3_read, i16 %Y_4_load_3_read, i16 %Y_5_load_3_read, i16 %Y_6_load_3_read, i16 %Y_7_load_3_read, i4 %select_ln316_1"   --->   Operation 190 'mux' 'tmp_98_3' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 191 [1/1] (0.00ns)   --->   "%sext_ln1245_17 = sext i16 %tmp_98_3"   --->   Operation 191 'sext' 'sext_ln1245_17' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 192 [1/1] (0.00ns)   --->   "%sext_ln1245_18 = sext i16 %tmp_20"   --->   Operation 192 'sext' 'sext_ln1245_18' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 193 [3/3] (0.99ns) (grouped into DSP with root node add_ln1245_8)   --->   "%mul_ln1245_8 = mul i24 %sext_ln1245_18, i24 %sext_ln1245_17"   --->   Operation 193 'mul' 'mul_ln1245_8' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 1.71>
+ST_5 : Operation 194 [1/1] (0.72ns)   --->   "%tmp_21 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %conv_i_i_i105717_lcssa522_read, i16 %conv_i_i_i1011305_lcssa666_read, i16 %conv_i_i_i965337_lcssa682_read, i16 %conv_i_i_i919369_lcssa698_read, i16 %conv_i_i_i873401_lcssa714_read, i16 %conv_i_i_i827433_lcssa730_read, i16 %conv_i_i_i781465_lcssa746_read, i16 %conv_i_i_i735497_lcssa762_read, i4 %select_ln316"   --->   Operation 194 'mux' 'tmp_21' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 195 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245 = add i24 %shl_ln, i24 %mul_ln1245"   --->   Operation 195 'add' 'add_ln1245' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 196 [1/3] (0.00ns) (grouped into DSP with root node add_ln1245_7)   --->   "%mul_ln1245_7 = mul i24 %sext_ln1245_16, i24 %sext_ln1245_15"   --->   Operation 196 'mul' 'mul_ln1245_7' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 197 [1/1] (0.00ns)   --->   "%tmp_39 = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %add_ln1245, i32 8, i32 23"   --->   Operation 197 'partselect' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 198 [1/1] (0.00ns)   --->   "%shl_ln737_7 = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i16.i8, i16 %tmp_39, i8 0"   --->   Operation 198 'bitconcatenate' 'shl_ln737_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 199 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_7 = add i24 %shl_ln737_7, i24 %mul_ln1245_7"   --->   Operation 199 'add' 'add_ln1245_7' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 200 [2/3] (0.99ns) (grouped into DSP with root node add_ln1245_8)   --->   "%mul_ln1245_8 = mul i24 %sext_ln1245_18, i24 %sext_ln1245_17"   --->   Operation 200 'mul' 'mul_ln1245_8' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 201 [1/1] (0.72ns)   --->   "%tmp_98_4 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %Y_0_load_4_read, i16 %Y_1_load_4_read, i16 %Y_2_load_4_read, i16 %Y_3_load_4_read, i16 %Y_4_load_4_read, i16 %Y_5_load_4_read, i16 %Y_6_load_4_read, i16 %Y_7_load_4_read, i4 %select_ln316_1"   --->   Operation 201 'mux' 'tmp_98_4' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 202 [1/1] (0.00ns)   --->   "%sext_ln1245_19 = sext i16 %tmp_98_4"   --->   Operation 202 'sext' 'sext_ln1245_19' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 203 [1/1] (0.00ns)   --->   "%sext_ln1245_20 = sext i16 %tmp_21"   --->   Operation 203 'sext' 'sext_ln1245_20' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 204 [3/3] (0.99ns) (grouped into DSP with root node add_ln1245_9)   --->   "%mul_ln1245_9 = mul i24 %sext_ln1245_20, i24 %sext_ln1245_19"   --->   Operation 204 'mul' 'mul_ln1245_9' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 1.71>
+ST_6 : Operation 205 [1/1] (0.72ns)   --->   "%tmp_22 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %conv_i_i_i105721_lcssa524_read, i16 %conv_i_i_i1011309_lcssa668_read, i16 %conv_i_i_i965341_lcssa684_read, i16 %conv_i_i_i919373_lcssa700_read, i16 %conv_i_i_i873405_lcssa716_read, i16 %conv_i_i_i827437_lcssa732_read, i16 %conv_i_i_i781469_lcssa748_read, i16 %conv_i_i_i735501_lcssa764_read, i4 %select_ln316"   --->   Operation 205 'mux' 'tmp_22' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 206 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_7 = add i24 %shl_ln737_7, i24 %mul_ln1245_7"   --->   Operation 206 'add' 'add_ln1245_7' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 207 [1/3] (0.00ns) (grouped into DSP with root node add_ln1245_8)   --->   "%mul_ln1245_8 = mul i24 %sext_ln1245_18, i24 %sext_ln1245_17"   --->   Operation 207 'mul' 'mul_ln1245_8' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 208 [1/1] (0.00ns)   --->   "%tmp_40 = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %add_ln1245_7, i32 8, i32 23"   --->   Operation 208 'partselect' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 209 [1/1] (0.00ns)   --->   "%shl_ln737_8 = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i16.i8, i16 %tmp_40, i8 0"   --->   Operation 209 'bitconcatenate' 'shl_ln737_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 210 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_8 = add i24 %shl_ln737_8, i24 %mul_ln1245_8"   --->   Operation 210 'add' 'add_ln1245_8' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 211 [2/3] (0.99ns) (grouped into DSP with root node add_ln1245_9)   --->   "%mul_ln1245_9 = mul i24 %sext_ln1245_20, i24 %sext_ln1245_19"   --->   Operation 211 'mul' 'mul_ln1245_9' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 212 [1/1] (0.72ns)   --->   "%tmp_98_5 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %Y_0_load_5_read, i16 %Y_1_load_5_read, i16 %Y_2_load_5_read, i16 %Y_3_load_5_read, i16 %Y_4_load_5_read, i16 %Y_5_load_5_read, i16 %Y_6_load_5_read, i16 %Y_7_load_5_read, i4 %select_ln316_1"   --->   Operation 212 'mux' 'tmp_98_5' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 213 [1/1] (0.00ns)   --->   "%sext_ln1245_21 = sext i16 %tmp_98_5"   --->   Operation 213 'sext' 'sext_ln1245_21' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 214 [1/1] (0.00ns)   --->   "%sext_ln1245_22 = sext i16 %tmp_22"   --->   Operation 214 'sext' 'sext_ln1245_22' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 215 [3/3] (0.99ns) (grouped into DSP with root node add_ln1245_10)   --->   "%mul_ln1245_10 = mul i24 %sext_ln1245_22, i24 %sext_ln1245_21"   --->   Operation 215 'mul' 'mul_ln1245_10' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 1.71>
+ST_7 : Operation 216 [1/1] (0.72ns)   --->   "%tmp_23 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %conv_i_i_i105725_lcssa526_read, i16 %conv_i_i_i1011313_lcssa670_read, i16 %conv_i_i_i965345_lcssa686_read, i16 %conv_i_i_i919377_lcssa702_read, i16 %conv_i_i_i873409_lcssa718_read, i16 %conv_i_i_i827441_lcssa734_read, i16 %conv_i_i_i781473_lcssa750_read, i16 %conv_i_i_i735505_lcssa766_read, i4 %select_ln316"   --->   Operation 216 'mux' 'tmp_23' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 217 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_8 = add i24 %shl_ln737_8, i24 %mul_ln1245_8"   --->   Operation 217 'add' 'add_ln1245_8' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 218 [1/3] (0.00ns) (grouped into DSP with root node add_ln1245_9)   --->   "%mul_ln1245_9 = mul i24 %sext_ln1245_20, i24 %sext_ln1245_19"   --->   Operation 218 'mul' 'mul_ln1245_9' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 219 [1/1] (0.00ns)   --->   "%tmp_41 = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %add_ln1245_8, i32 8, i32 23"   --->   Operation 219 'partselect' 'tmp_41' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 220 [1/1] (0.00ns)   --->   "%shl_ln737_9 = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i16.i8, i16 %tmp_41, i8 0"   --->   Operation 220 'bitconcatenate' 'shl_ln737_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 221 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_9 = add i24 %shl_ln737_9, i24 %mul_ln1245_9"   --->   Operation 221 'add' 'add_ln1245_9' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 222 [2/3] (0.99ns) (grouped into DSP with root node add_ln1245_10)   --->   "%mul_ln1245_10 = mul i24 %sext_ln1245_22, i24 %sext_ln1245_21"   --->   Operation 222 'mul' 'mul_ln1245_10' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 223 [1/1] (0.72ns)   --->   "%tmp_98_6 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %Y_0_load_6_read, i16 %Y_1_load_6_read, i16 %Y_2_load_6_read, i16 %Y_3_load_6_read, i16 %Y_4_load_6_read, i16 %Y_5_load_6_read, i16 %Y_6_load_6_read, i16 %Y_7_load_6_read, i4 %select_ln316_1"   --->   Operation 223 'mux' 'tmp_98_6' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 224 [1/1] (0.00ns)   --->   "%sext_ln1245_23 = sext i16 %tmp_98_6"   --->   Operation 224 'sext' 'sext_ln1245_23' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 225 [1/1] (0.00ns)   --->   "%sext_ln1245_24 = sext i16 %tmp_23"   --->   Operation 225 'sext' 'sext_ln1245_24' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 226 [3/3] (0.99ns) (grouped into DSP with root node add_ln1245_11)   --->   "%mul_ln1245_11 = mul i24 %sext_ln1245_24, i24 %sext_ln1245_23"   --->   Operation 226 'mul' 'mul_ln1245_11' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 1.71>
+ST_8 : Operation 227 [1/1] (0.00ns)   --->   "%tmp_61_cast = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i3, i3 %empty_286, i3 0" [src/QRD.cpp:316]   --->   Operation 227 'bitconcatenate' 'tmp_61_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 228 [1/1] (0.00ns)   --->   "%select_ln316_cast = zext i4 %select_ln316" [src/QRD.cpp:316]   --->   Operation 228 'zext' 'select_ln316_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 229 [1/1] (0.78ns)   --->   "%empty_287 = add i6 %tmp_61_cast, i6 %select_ln316_cast" [src/QRD.cpp:316]   --->   Operation 229 'add' 'empty_287' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 230 [1/1] (0.72ns)   --->   "%tmp_24 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %conv_i_i_i105729_lcssa528_read, i16 %conv_i_i_i1011317_lcssa672_read, i16 %conv_i_i_i965349_lcssa688_read, i16 %conv_i_i_i919381_lcssa704_read, i16 %conv_i_i_i873413_lcssa720_read, i16 %conv_i_i_i827445_lcssa736_read, i16 %conv_i_i_i781477_lcssa752_read, i16 %conv_i_i_i735509_lcssa768_read, i4 %select_ln316"   --->   Operation 230 'mux' 'tmp_24' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 231 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_9 = add i24 %shl_ln737_9, i24 %mul_ln1245_9"   --->   Operation 231 'add' 'add_ln1245_9' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 232 [1/3] (0.00ns) (grouped into DSP with root node add_ln1245_10)   --->   "%mul_ln1245_10 = mul i24 %sext_ln1245_22, i24 %sext_ln1245_21"   --->   Operation 232 'mul' 'mul_ln1245_10' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 233 [1/1] (0.00ns)   --->   "%tmp_42 = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %add_ln1245_9, i32 8, i32 23"   --->   Operation 233 'partselect' 'tmp_42' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 234 [1/1] (0.00ns)   --->   "%shl_ln737_s = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i16.i8, i16 %tmp_42, i8 0"   --->   Operation 234 'bitconcatenate' 'shl_ln737_s' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 235 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_10 = add i24 %shl_ln737_s, i24 %mul_ln1245_10"   --->   Operation 235 'add' 'add_ln1245_10' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 236 [2/3] (0.99ns) (grouped into DSP with root node add_ln1245_11)   --->   "%mul_ln1245_11 = mul i24 %sext_ln1245_24, i24 %sext_ln1245_23"   --->   Operation 236 'mul' 'mul_ln1245_11' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 237 [1/1] (0.72ns)   --->   "%tmp_98_7 = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i4, i16 %Y_0_load_7_read, i16 %Y_1_load_7_read, i16 %Y_2_load_7_read, i16 %Y_3_load_7_read, i16 %Y_4_load_7_read, i16 %Y_5_load_7_read, i16 %Y_6_load_7_read, i16 %Y_7_load_7_read, i4 %select_ln316_1"   --->   Operation 237 'mux' 'tmp_98_7' <Predicate = true> <Delay = 0.72> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 238 [1/1] (0.00ns)   --->   "%sext_ln1245_25 = sext i16 %tmp_98_7"   --->   Operation 238 'sext' 'sext_ln1245_25' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 239 [1/1] (0.00ns)   --->   "%sext_ln1245_26 = sext i16 %tmp_24"   --->   Operation 239 'sext' 'sext_ln1245_26' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 240 [3/3] (0.99ns) (grouped into DSP with root node add_ln1245_12)   --->   "%mul_ln1245_12 = mul i24 %sext_ln1245_26, i24 %sext_ln1245_25"   --->   Operation 240 'mul' 'mul_ln1245_12' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 8> <Delay = 1.29>
+ST_9 : Operation 241 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_10 = add i24 %shl_ln737_s, i24 %mul_ln1245_10"   --->   Operation 241 'add' 'add_ln1245_10' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 242 [1/3] (0.00ns) (grouped into DSP with root node add_ln1245_11)   --->   "%mul_ln1245_11 = mul i24 %sext_ln1245_24, i24 %sext_ln1245_23"   --->   Operation 242 'mul' 'mul_ln1245_11' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_43 = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %add_ln1245_10, i32 8, i32 23"   --->   Operation 243 'partselect' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 244 [1/1] (0.00ns)   --->   "%shl_ln737_1 = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i16.i8, i16 %tmp_43, i8 0"   --->   Operation 244 'bitconcatenate' 'shl_ln737_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 245 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_11 = add i24 %shl_ln737_1, i24 %mul_ln1245_11"   --->   Operation 245 'add' 'add_ln1245_11' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 246 [2/3] (0.99ns) (grouped into DSP with root node add_ln1245_12)   --->   "%mul_ln1245_12 = mul i24 %sext_ln1245_26, i24 %sext_ln1245_25"   --->   Operation 246 'mul' 'mul_ln1245_12' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 1.29>
+ST_10 : Operation 247 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_11 = add i24 %shl_ln737_1, i24 %mul_ln1245_11"   --->   Operation 247 'add' 'add_ln1245_11' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 248 [1/3] (0.00ns) (grouped into DSP with root node add_ln1245_12)   --->   "%mul_ln1245_12 = mul i24 %sext_ln1245_26, i24 %sext_ln1245_25"   --->   Operation 248 'mul' 'mul_ln1245_12' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 249 [1/1] (0.00ns)   --->   "%tmp_44 = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %add_ln1245_11, i32 8, i32 23"   --->   Operation 249 'partselect' 'tmp_44' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 250 [1/1] (0.00ns)   --->   "%shl_ln737_2 = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i16.i8, i16 %tmp_44, i8 0"   --->   Operation 250 'bitconcatenate' 'shl_ln737_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 251 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_12 = add i24 %shl_ln737_2, i24 %mul_ln1245_12"   --->   Operation 251 'add' 'add_ln1245_12' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 262 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 262 'ret' 'ret_ln0' <Predicate = (icmp_ln316)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 1.88>
+ST_11 : Operation 252 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_316_9_VITIS_LOOP_317_10_str"   --->   Operation 252 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 253 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64"   --->   Operation 253 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 254 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 254 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 255 [1/1] (0.00ns)   --->   "%p_cast = zext i6 %empty_287" [src/QRD.cpp:316]   --->   Operation 255 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 256 [1/1] (0.00ns)   --->   "%Q_addr = getelementptr i16 %Q, i64 0, i64 %p_cast" [src/QRD.cpp:316]   --->   Operation 256 'getelementptr' 'Q_addr' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 257 [1/1] (0.00ns)   --->   "%specloopname_ln266 = specloopname void @_ssdm_op_SpecLoopName, void @empty_50" [src/QRD.cpp:266]   --->   Operation 257 'specloopname' 'specloopname_ln266' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 258 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln1245_12 = add i24 %shl_ln737_2, i24 %mul_ln1245_12"   --->   Operation 258 'add' 'add_ln1245_12' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 259 [1/1] (0.00ns)   --->   "%trunc_ln717_s = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %add_ln1245_12, i32 8, i32 23"   --->   Operation 259 'partselect' 'trunc_ln717_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 260 [1/1] (1.23ns)   --->   "%store_ln324 = store i16 %trunc_ln717_s, i6 %Q_addr" [src/QRD.cpp:324]   --->   Operation 260 'store' 'store_ln324' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 16> <Depth = 64> <RAM>
+ST_11 : Operation 261 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 261 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 30ns, clock uncertainty: 8.1ns.
+
+ <State 1>: 2.44ns
+The critical path consists of the following:
+	'alloca' operation ('i') [131]  (0 ns)
+	'load' operation ('i_load', src/QRD.cpp:316) on local variable 'i' [273]  (0 ns)
+	'add' operation ('add_ln316', src/QRD.cpp:316) [274]  (0.797 ns)
+	'select' operation ('select_ln316_1', src/QRD.cpp:316) [279]  (0.391 ns)
+	'mux' operation ('tmp_25') [296]  (0.721 ns)
+	'mul' operation of DSP[299] ('mul_ln717') [299]  (0.535 ns)
+
+ <State 2>: 1.72ns
+The critical path consists of the following:
+	'mux' operation ('tmp_18') [289]  (0.721 ns)
+	'mul' operation of DSP[306] ('mul_ln1245') [303]  (0.996 ns)
+
+ <State 3>: 1.72ns
+The critical path consists of the following:
+	'mux' operation ('tmp_19') [290]  (0.721 ns)
+	'mul' operation of DSP[313] ('mul_ln1245_7') [310]  (0.996 ns)
+
+ <State 4>: 1.72ns
+The critical path consists of the following:
+	'mux' operation ('tmp_20') [291]  (0.721 ns)
+	'mul' operation of DSP[320] ('mul_ln1245_8') [317]  (0.996 ns)
+
+ <State 5>: 1.72ns
+The critical path consists of the following:
+	'mux' operation ('tmp_21') [292]  (0.721 ns)
+	'mul' operation of DSP[327] ('mul_ln1245_9') [324]  (0.996 ns)
+
+ <State 6>: 1.72ns
+The critical path consists of the following:
+	'mux' operation ('tmp_22') [293]  (0.721 ns)
+	'mul' operation of DSP[334] ('mul_ln1245_10') [331]  (0.996 ns)
+
+ <State 7>: 1.72ns
+The critical path consists of the following:
+	'mux' operation ('tmp_23') [294]  (0.721 ns)
+	'mul' operation of DSP[341] ('mul_ln1245_11') [338]  (0.996 ns)
+
+ <State 8>: 1.72ns
+The critical path consists of the following:
+	'mux' operation ('tmp_24') [295]  (0.721 ns)
+	'mul' operation of DSP[348] ('mul_ln1245_12') [345]  (0.996 ns)
+
+ <State 9>: 1.29ns
+The critical path consists of the following:
+	'add' operation of DSP[334] ('add_ln1245_10') [334]  (0.645 ns)
+	'add' operation of DSP[341] ('add_ln1245_11') [341]  (0.645 ns)
+
+ <State 10>: 1.29ns
+The critical path consists of the following:
+	'add' operation of DSP[341] ('add_ln1245_11') [341]  (0.645 ns)
+	'add' operation of DSP[348] ('add_ln1245_12') [348]  (0.645 ns)
+
+ <State 11>: 1.88ns
+The critical path consists of the following:
+	'add' operation of DSP[348] ('add_ln1245_12') [348]  (0.645 ns)
+	'store' operation ('store_ln324', src/QRD.cpp:324) of variable 'trunc_ln717_s' on array 'Q' [350]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

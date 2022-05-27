@@ -1,0 +1,204 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6'" level="0">
+<item name = "Date">Wed May 25 23:55:48 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">MIMO</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">30.00 ns, 3.791 ns, 8.10 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">66, 66, 1.980 us, 1.980 us, 66, 66, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOOP_02_VITIS_LOOP_251_6">64, 64, 1, 1, 1, 64, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 79, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 387, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 63, -</column>
+<column name="Register">-, -, 17, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_84_16_1_1_U304">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_16_1_1_U305">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_16_1_1_U306">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_16_1_1_U307">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_16_1_1_U308">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_16_1_1_U309">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_16_1_1_U310">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_16_1_1_U311">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_16_1_1_U312">mux_84_16_1_1, 0, 0, 0, 43, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln250_1_fu_605_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln250_fu_617_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln251_fu_871_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln252_fu_661_p2">+, 0, 0, 13, 6, 6</column>
+<column name="icmp_ln250_fu_599_p2">icmp, 0, 0, 11, 7, 8</column>
+<column name="icmp_ln251_fu_623_p2">icmp, 0, 0, 9, 4, 5</column>
+<column name="select_ln250_1_fu_637_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln250_fu_629_p3">select, 0, 0, 4, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i_load">9, 2, 4, 8</column>
+<column name="ap_sig_allocacmp_indvar_flatten_load">9, 2, 7, 14</column>
+<column name="ap_sig_allocacmp_j_load">9, 2, 4, 8</column>
+<column name="i_fu_176">9, 2, 4, 8</column>
+<column name="indvar_flatten_fu_180">9, 2, 7, 14</column>
+<column name="j_fu_172">9, 2, 4, 8</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="i_fu_176">4, 0, 4, 0</column>
+<column name="indvar_flatten_fu_180">7, 0, 7, 0</column>
+<column name="j_fu_172">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, QRD_Pipeline_LOOP_02_VITIS_LOOP_251_6, return value</column>
+<column name="R_address0">out, 6, ap_memory, R, array</column>
+<column name="R_ce0">out, 1, ap_memory, R, array</column>
+<column name="R_we0">out, 1, ap_memory, R, array</column>
+<column name="R_d0">out, 16, ap_memory, R, array</column>
+<column name="p_0_0_03279800_lcssa982_reload">in, 16, ap_none, p_0_0_03279800_lcssa982_reload, scalar</column>
+<column name="conv_i_i_i2390896_lcssa1046_reload">in, 16, ap_none, conv_i_i_i2390896_lcssa1046_reload, scalar</column>
+<column name="p_0_0_03279797_lcssa980_reload">in, 16, ap_none, p_0_0_03279797_lcssa980_reload, scalar</column>
+<column name="conv_i_i_i2390893_lcssa1044_reload">in, 16, ap_none, conv_i_i_i2390893_lcssa1044_reload, scalar</column>
+<column name="p_0_0_03279794_lcssa978_reload">in, 16, ap_none, p_0_0_03279794_lcssa978_reload, scalar</column>
+<column name="conv_i_i_i2390890_lcssa1042_reload">in, 16, ap_none, conv_i_i_i2390890_lcssa1042_reload, scalar</column>
+<column name="p_0_0_03279803_lcssa984_reload">in, 16, ap_none, p_0_0_03279803_lcssa984_reload, scalar</column>
+<column name="conv_i_i_i2390899_lcssa1048_reload">in, 16, ap_none, conv_i_i_i2390899_lcssa1048_reload, scalar</column>
+<column name="p_0_0_03278848_lcssa1014_reload">in, 16, ap_none, p_0_0_03278848_lcssa1014_reload, scalar</column>
+<column name="p_0_0_03279944_lcssa1078_reload">in, 16, ap_none, p_0_0_03279944_lcssa1078_reload, scalar</column>
+<column name="p_0_0_03278845_lcssa1012_reload">in, 16, ap_none, p_0_0_03278845_lcssa1012_reload, scalar</column>
+<column name="p_0_0_03279941_lcssa1076_reload">in, 16, ap_none, p_0_0_03279941_lcssa1076_reload, scalar</column>
+<column name="p_0_0_03278842_lcssa1010_reload">in, 16, ap_none, p_0_0_03278842_lcssa1010_reload, scalar</column>
+<column name="p_0_0_03279938_lcssa1074_reload">in, 16, ap_none, p_0_0_03279938_lcssa1074_reload, scalar</column>
+<column name="p_0_0_03278851_lcssa1016_reload">in, 16, ap_none, p_0_0_03278851_lcssa1016_reload, scalar</column>
+<column name="p_0_0_03279947_lcssa1080_reload">in, 16, ap_none, p_0_0_03279947_lcssa1080_reload, scalar</column>
+<column name="p_0_0_03279787_lcssa974_reload">in, 16, ap_none, p_0_0_03279787_lcssa974_reload, scalar</column>
+<column name="conv_i_i_i2390883_lcssa1038_reload">in, 16, ap_none, conv_i_i_i2390883_lcssa1038_reload, scalar</column>
+<column name="p_0_0_03279784_lcssa972_reload">in, 16, ap_none, p_0_0_03279784_lcssa972_reload, scalar</column>
+<column name="conv_i_i_i2390880_lcssa1036_reload">in, 16, ap_none, conv_i_i_i2390880_lcssa1036_reload, scalar</column>
+<column name="p_0_0_03279781_lcssa970_reload">in, 16, ap_none, p_0_0_03279781_lcssa970_reload, scalar</column>
+<column name="conv_i_i_i2390877_lcssa1034_reload">in, 16, ap_none, conv_i_i_i2390877_lcssa1034_reload, scalar</column>
+<column name="p_0_0_03279790_lcssa976_reload">in, 16, ap_none, p_0_0_03279790_lcssa976_reload, scalar</column>
+<column name="conv_i_i_i2390886_lcssa1040_reload">in, 16, ap_none, conv_i_i_i2390886_lcssa1040_reload, scalar</column>
+<column name="p_0_0_03278835_lcssa1006_reload">in, 16, ap_none, p_0_0_03278835_lcssa1006_reload, scalar</column>
+<column name="p_0_0_03279931_lcssa1070_reload">in, 16, ap_none, p_0_0_03279931_lcssa1070_reload, scalar</column>
+<column name="p_0_0_03278832_lcssa1004_reload">in, 16, ap_none, p_0_0_03278832_lcssa1004_reload, scalar</column>
+<column name="p_0_0_03279928_lcssa1068_reload">in, 16, ap_none, p_0_0_03279928_lcssa1068_reload, scalar</column>
+<column name="p_0_0_03278829_lcssa1002_reload">in, 16, ap_none, p_0_0_03278829_lcssa1002_reload, scalar</column>
+<column name="p_0_0_03279925_lcssa1066_reload">in, 16, ap_none, p_0_0_03279925_lcssa1066_reload, scalar</column>
+<column name="p_0_0_03278838_lcssa1008_reload">in, 16, ap_none, p_0_0_03278838_lcssa1008_reload, scalar</column>
+<column name="p_0_0_03279934_lcssa1072_reload">in, 16, ap_none, p_0_0_03279934_lcssa1072_reload, scalar</column>
+<column name="p_0_0_03279775_lcssa966_reload">in, 16, ap_none, p_0_0_03279775_lcssa966_reload, scalar</column>
+<column name="conv_i_i_i2390871_lcssa1030_reload">in, 16, ap_none, conv_i_i_i2390871_lcssa1030_reload, scalar</column>
+<column name="p_0_0_03279772_lcssa964_reload">in, 16, ap_none, p_0_0_03279772_lcssa964_reload, scalar</column>
+<column name="conv_i_i_i2390868_lcssa1028_reload">in, 16, ap_none, conv_i_i_i2390868_lcssa1028_reload, scalar</column>
+<column name="p_0_0_03279769_lcssa962_reload">in, 16, ap_none, p_0_0_03279769_lcssa962_reload, scalar</column>
+<column name="conv_i_i_i2390865_lcssa1026_reload">in, 16, ap_none, conv_i_i_i2390865_lcssa1026_reload, scalar</column>
+<column name="p_0_0_03279778_lcssa968_reload">in, 16, ap_none, p_0_0_03279778_lcssa968_reload, scalar</column>
+<column name="conv_i_i_i2390874_lcssa1032_reload">in, 16, ap_none, conv_i_i_i2390874_lcssa1032_reload, scalar</column>
+<column name="p_0_0_03278823_lcssa998_reload">in, 16, ap_none, p_0_0_03278823_lcssa998_reload, scalar</column>
+<column name="p_0_0_03279919_lcssa1062_reload">in, 16, ap_none, p_0_0_03279919_lcssa1062_reload, scalar</column>
+<column name="p_0_0_03278820_lcssa996_reload">in, 16, ap_none, p_0_0_03278820_lcssa996_reload, scalar</column>
+<column name="p_0_0_03279916_lcssa1060_reload">in, 16, ap_none, p_0_0_03279916_lcssa1060_reload, scalar</column>
+<column name="p_0_0_03278817_lcssa994_reload">in, 16, ap_none, p_0_0_03278817_lcssa994_reload, scalar</column>
+<column name="p_0_0_03279913_lcssa1058_reload">in, 16, ap_none, p_0_0_03279913_lcssa1058_reload, scalar</column>
+<column name="p_0_0_03278826_lcssa1000_reload">in, 16, ap_none, p_0_0_03278826_lcssa1000_reload, scalar</column>
+<column name="p_0_0_03279922_lcssa1064_reload">in, 16, ap_none, p_0_0_03279922_lcssa1064_reload, scalar</column>
+<column name="p_0_0_03279811_lcssa990_reload">in, 16, ap_none, p_0_0_03279811_lcssa990_reload, scalar</column>
+<column name="conv_i_i_i2390907_lcssa1054_reload">in, 16, ap_none, conv_i_i_i2390907_lcssa1054_reload, scalar</column>
+<column name="p_0_0_03279808_lcssa988_reload">in, 16, ap_none, p_0_0_03279808_lcssa988_reload, scalar</column>
+<column name="conv_i_i_i2390904_lcssa1052_reload">in, 16, ap_none, conv_i_i_i2390904_lcssa1052_reload, scalar</column>
+<column name="p_0_0_03279805_lcssa986_reload">in, 16, ap_none, p_0_0_03279805_lcssa986_reload, scalar</column>
+<column name="conv_i_i_i2390901_lcssa1050_reload">in, 16, ap_none, conv_i_i_i2390901_lcssa1050_reload, scalar</column>
+<column name="p_0_0_03279814_lcssa992_reload">in, 16, ap_none, p_0_0_03279814_lcssa992_reload, scalar</column>
+<column name="conv_i_i_i2390910_lcssa1056_reload">in, 16, ap_none, conv_i_i_i2390910_lcssa1056_reload, scalar</column>
+<column name="p_0_0_03278859_lcssa1022_reload">in, 16, ap_none, p_0_0_03278859_lcssa1022_reload, scalar</column>
+<column name="p_0_0_03279955_lcssa1086_reload">in, 16, ap_none, p_0_0_03279955_lcssa1086_reload, scalar</column>
+<column name="p_0_0_03278856_lcssa1020_reload">in, 16, ap_none, p_0_0_03278856_lcssa1020_reload, scalar</column>
+<column name="p_0_0_03279952_lcssa1084_reload">in, 16, ap_none, p_0_0_03279952_lcssa1084_reload, scalar</column>
+<column name="p_0_0_03278853_lcssa1018_reload">in, 16, ap_none, p_0_0_03278853_lcssa1018_reload, scalar</column>
+<column name="p_0_0_03279949_lcssa1082_reload">in, 16, ap_none, p_0_0_03279949_lcssa1082_reload, scalar</column>
+<column name="p_0_0_03278862_lcssa1024_reload">in, 16, ap_none, p_0_0_03278862_lcssa1024_reload, scalar</column>
+<column name="p_0_0_03279958_lcssa1088_reload">in, 16, ap_none, p_0_0_03279958_lcssa1088_reload, scalar</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,446 @@
+
+
+================================================================
+== Vitis HLS Report for 'QRD_Pipeline_LOOP_01'
+================================================================
+* Date:           Wed May 25 23:55:18 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  30.00 ns|  1.378 ns|     8.10 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        6|        6|  0.180 us|  0.180 us|    6|    6|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_01  |        4|        4|         1|          1|          1|     4|       yes|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.37>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_0_0_03279769_lcssa962 = alloca i32 1"   --->   Operation 5 'alloca' 'p_0_0_03279769_lcssa962' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_0_0_03279772_lcssa964 = alloca i32 1"   --->   Operation 6 'alloca' 'p_0_0_03279772_lcssa964' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_0_0_03279775_lcssa966 = alloca i32 1"   --->   Operation 7 'alloca' 'p_0_0_03279775_lcssa966' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_0_0_03279778_lcssa968 = alloca i32 1"   --->   Operation 8 'alloca' 'p_0_0_03279778_lcssa968' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_0_0_03279781_lcssa970 = alloca i32 1"   --->   Operation 9 'alloca' 'p_0_0_03279781_lcssa970' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_0_0_03279784_lcssa972 = alloca i32 1"   --->   Operation 10 'alloca' 'p_0_0_03279784_lcssa972' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_0_0_03279787_lcssa974 = alloca i32 1"   --->   Operation 11 'alloca' 'p_0_0_03279787_lcssa974' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_0_0_03279790_lcssa976 = alloca i32 1"   --->   Operation 12 'alloca' 'p_0_0_03279790_lcssa976' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_0_0_03279794_lcssa978 = alloca i32 1"   --->   Operation 13 'alloca' 'p_0_0_03279794_lcssa978' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_0_0_03279797_lcssa980 = alloca i32 1"   --->   Operation 14 'alloca' 'p_0_0_03279797_lcssa980' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_0_0_03279800_lcssa982 = alloca i32 1"   --->   Operation 15 'alloca' 'p_0_0_03279800_lcssa982' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_0_0_03279803_lcssa984 = alloca i32 1"   --->   Operation 16 'alloca' 'p_0_0_03279803_lcssa984' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_0_0_03279805_lcssa986 = alloca i32 1"   --->   Operation 17 'alloca' 'p_0_0_03279805_lcssa986' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_0_0_03279808_lcssa988 = alloca i32 1"   --->   Operation 18 'alloca' 'p_0_0_03279808_lcssa988' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_0_0_03279811_lcssa990 = alloca i32 1"   --->   Operation 19 'alloca' 'p_0_0_03279811_lcssa990' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_0_0_03279814_lcssa992 = alloca i32 1"   --->   Operation 20 'alloca' 'p_0_0_03279814_lcssa992' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_0_0_03278817_lcssa994 = alloca i32 1"   --->   Operation 21 'alloca' 'p_0_0_03278817_lcssa994' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_0_0_03278820_lcssa996 = alloca i32 1"   --->   Operation 22 'alloca' 'p_0_0_03278820_lcssa996' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_0_0_03278823_lcssa998 = alloca i32 1"   --->   Operation 23 'alloca' 'p_0_0_03278823_lcssa998' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_0_0_03278826_lcssa1000 = alloca i32 1"   --->   Operation 24 'alloca' 'p_0_0_03278826_lcssa1000' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_0_0_03278829_lcssa1002 = alloca i32 1"   --->   Operation 25 'alloca' 'p_0_0_03278829_lcssa1002' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_0_0_03278832_lcssa1004 = alloca i32 1"   --->   Operation 26 'alloca' 'p_0_0_03278832_lcssa1004' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_0_0_03278835_lcssa1006 = alloca i32 1"   --->   Operation 27 'alloca' 'p_0_0_03278835_lcssa1006' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_0_0_03278838_lcssa1008 = alloca i32 1"   --->   Operation 28 'alloca' 'p_0_0_03278838_lcssa1008' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_0_0_03278842_lcssa1010 = alloca i32 1"   --->   Operation 29 'alloca' 'p_0_0_03278842_lcssa1010' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_0_0_03278845_lcssa1012 = alloca i32 1"   --->   Operation 30 'alloca' 'p_0_0_03278845_lcssa1012' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_0_0_03278848_lcssa1014 = alloca i32 1"   --->   Operation 31 'alloca' 'p_0_0_03278848_lcssa1014' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_0_0_03278851_lcssa1016 = alloca i32 1"   --->   Operation 32 'alloca' 'p_0_0_03278851_lcssa1016' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_0_0_03278853_lcssa1018 = alloca i32 1"   --->   Operation 33 'alloca' 'p_0_0_03278853_lcssa1018' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_0_0_03278856_lcssa1020 = alloca i32 1"   --->   Operation 34 'alloca' 'p_0_0_03278856_lcssa1020' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_0_0_03278859_lcssa1022 = alloca i32 1"   --->   Operation 35 'alloca' 'p_0_0_03278859_lcssa1022' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%p_0_0_03278862_lcssa1024 = alloca i32 1"   --->   Operation 36 'alloca' 'p_0_0_03278862_lcssa1024' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%conv_i_i_i2390865_lcssa1026 = alloca i32 1"   --->   Operation 37 'alloca' 'conv_i_i_i2390865_lcssa1026' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%conv_i_i_i2390868_lcssa1028 = alloca i32 1"   --->   Operation 38 'alloca' 'conv_i_i_i2390868_lcssa1028' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%conv_i_i_i2390871_lcssa1030 = alloca i32 1"   --->   Operation 39 'alloca' 'conv_i_i_i2390871_lcssa1030' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%conv_i_i_i2390874_lcssa1032 = alloca i32 1"   --->   Operation 40 'alloca' 'conv_i_i_i2390874_lcssa1032' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%conv_i_i_i2390877_lcssa1034 = alloca i32 1"   --->   Operation 41 'alloca' 'conv_i_i_i2390877_lcssa1034' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%conv_i_i_i2390880_lcssa1036 = alloca i32 1"   --->   Operation 42 'alloca' 'conv_i_i_i2390880_lcssa1036' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%conv_i_i_i2390883_lcssa1038 = alloca i32 1"   --->   Operation 43 'alloca' 'conv_i_i_i2390883_lcssa1038' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%conv_i_i_i2390886_lcssa1040 = alloca i32 1"   --->   Operation 44 'alloca' 'conv_i_i_i2390886_lcssa1040' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%conv_i_i_i2390890_lcssa1042 = alloca i32 1"   --->   Operation 45 'alloca' 'conv_i_i_i2390890_lcssa1042' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%conv_i_i_i2390893_lcssa1044 = alloca i32 1"   --->   Operation 46 'alloca' 'conv_i_i_i2390893_lcssa1044' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%conv_i_i_i2390896_lcssa1046 = alloca i32 1"   --->   Operation 47 'alloca' 'conv_i_i_i2390896_lcssa1046' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%conv_i_i_i2390899_lcssa1048 = alloca i32 1"   --->   Operation 48 'alloca' 'conv_i_i_i2390899_lcssa1048' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%conv_i_i_i2390901_lcssa1050 = alloca i32 1"   --->   Operation 49 'alloca' 'conv_i_i_i2390901_lcssa1050' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%conv_i_i_i2390904_lcssa1052 = alloca i32 1"   --->   Operation 50 'alloca' 'conv_i_i_i2390904_lcssa1052' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%conv_i_i_i2390907_lcssa1054 = alloca i32 1"   --->   Operation 51 'alloca' 'conv_i_i_i2390907_lcssa1054' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%conv_i_i_i2390910_lcssa1056 = alloca i32 1"   --->   Operation 52 'alloca' 'conv_i_i_i2390910_lcssa1056' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_0_0_03279913_lcssa1058 = alloca i32 1"   --->   Operation 53 'alloca' 'p_0_0_03279913_lcssa1058' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_0_0_03279916_lcssa1060 = alloca i32 1"   --->   Operation 54 'alloca' 'p_0_0_03279916_lcssa1060' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_0_0_03279919_lcssa1062 = alloca i32 1"   --->   Operation 55 'alloca' 'p_0_0_03279919_lcssa1062' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%p_0_0_03279922_lcssa1064 = alloca i32 1"   --->   Operation 56 'alloca' 'p_0_0_03279922_lcssa1064' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_0_0_03279925_lcssa1066 = alloca i32 1"   --->   Operation 57 'alloca' 'p_0_0_03279925_lcssa1066' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%p_0_0_03279928_lcssa1068 = alloca i32 1"   --->   Operation 58 'alloca' 'p_0_0_03279928_lcssa1068' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%p_0_0_03279931_lcssa1070 = alloca i32 1"   --->   Operation 59 'alloca' 'p_0_0_03279931_lcssa1070' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%p_0_0_03279934_lcssa1072 = alloca i32 1"   --->   Operation 60 'alloca' 'p_0_0_03279934_lcssa1072' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_0_0_03279938_lcssa1074 = alloca i32 1"   --->   Operation 61 'alloca' 'p_0_0_03279938_lcssa1074' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%p_0_0_03279941_lcssa1076 = alloca i32 1"   --->   Operation 62 'alloca' 'p_0_0_03279941_lcssa1076' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%p_0_0_03279944_lcssa1078 = alloca i32 1"   --->   Operation 63 'alloca' 'p_0_0_03279944_lcssa1078' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%p_0_0_03279947_lcssa1080 = alloca i32 1"   --->   Operation 64 'alloca' 'p_0_0_03279947_lcssa1080' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_0_0_03279949_lcssa1082 = alloca i32 1"   --->   Operation 65 'alloca' 'p_0_0_03279949_lcssa1082' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%p_0_0_03279952_lcssa1084 = alloca i32 1"   --->   Operation 66 'alloca' 'p_0_0_03279952_lcssa1084' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%p_0_0_03279955_lcssa1086 = alloca i32 1"   --->   Operation 67 'alloca' 'p_0_0_03279955_lcssa1086' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%p_0_0_03279958_lcssa1088 = alloca i32 1"   --->   Operation 68 'alloca' 'p_0_0_03279958_lcssa1088' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%mux_case_782_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_782"   --->   Operation 69 'read' 'mux_case_782_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%HH_7_1_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %HH_7_1_4"   --->   Operation 70 'read' 'HH_7_1_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%HH_7_0_0_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %HH_7_0_0"   --->   Operation 71 'read' 'HH_7_0_0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%select_ln580_179_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_179"   --->   Operation 72 'read' 'select_ln580_179_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%mux_case_581_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_581"   --->   Operation 73 'read' 'mux_case_581_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%mux_case_1118_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_1118"   --->   Operation 74 'read' 'mux_case_1118_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%HH_5_0_0_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %HH_5_0_0"   --->   Operation 75 'read' 'HH_5_0_0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%select_ln580_158_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_158"   --->   Operation 76 'read' 'select_ln580_158_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%select_ln580_148_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_148"   --->   Operation 77 'read' 'select_ln580_148_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%HH_3_1_4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %HH_3_1_4"   --->   Operation 78 'read' 'HH_3_1_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%HH_3_0_0_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %HH_3_0_0"   --->   Operation 79 'read' 'HH_3_0_0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%select_ln580_71_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_71"   --->   Operation 80 'read' 'select_ln580_71_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%select_ln580_61_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_61"   --->   Operation 81 'read' 'select_ln580_61_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%select_ln580_55_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_55"   --->   Operation 82 'read' 'select_ln580_55_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%HH_1_0_0_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %HH_1_0_0"   --->   Operation 83 'read' 'HH_1_0_0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%select_ln580_189_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_189"   --->   Operation 84 'read' 'select_ln580_189_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%HH_6_0_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %HH_6_0_2"   --->   Operation 85 'read' 'HH_6_0_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%select_ln580_169_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_169"   --->   Operation 86 'read' 'select_ln580_169_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%select_ln580_164_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_164"   --->   Operation 87 'read' 'select_ln580_164_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%select_ln580_138_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_138"   --->   Operation 88 'read' 'select_ln580_138_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%select_ln580_128_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_128"   --->   Operation 89 'read' 'select_ln580_128_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%select_ln580_123_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_123"   --->   Operation 90 'read' 'select_ln580_123_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%HH_2_0_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %HH_2_0_2"   --->   Operation 91 'read' 'HH_2_0_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%select_ln580_45_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_45"   --->   Operation 92 'read' 'select_ln580_45_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%select_ln580_35_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_35"   --->   Operation 93 'read' 'select_ln580_35_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%select_ln580_25_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_25"   --->   Operation 94 'read' 'select_ln580_25_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%select_ln580_20_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %select_ln580_20"   --->   Operation 95 'read' 'select_ln580_20_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.42ns)   --->   "%store_ln0 = store i4 0, i4 %i"   --->   Operation 96 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 97 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%i_4 = load i4 %i"   --->   Operation 98 'load' 'i_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 99 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_43 = bitselect i1 @_ssdm_op_BitSelect.i1.i4.i32, i4 %i_4, i32 3" [src/QRD.cpp:240]   --->   Operation 100 'bitselect' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 101 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%br_ln240 = br i1 %tmp_43, void %.split24, void %.preheader774.preheader.preheader.exitStub" [src/QRD.cpp:240]   --->   Operation 102 'br' 'br_ln240' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%empty_288 = trunc i4 %i_4"   --->   Operation 103 'trunc' 'empty_288' <Predicate = (!tmp_43)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%specloopname_ln130 = specloopname void @_ssdm_op_SpecLoopName, void @empty_29" [src/QRD.cpp:130]   --->   Operation 104 'specloopname' 'specloopname_ln130' <Predicate = (!tmp_43)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%tmp = partselect i2 @_ssdm_op_PartSelect.i2.i4.i32.i32, i4 %i_4, i32 1, i32 2"   --->   Operation 105 'partselect' 'tmp' <Predicate = (!tmp_43)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.52ns)   --->   "%tmp_s = mux i16 @_ssdm_op_Mux.ap_auto.4i16.i2, i16 %select_ln580_20_read, i16 %select_ln580_25_read, i16 %select_ln580_35_read, i16 %select_ln580_45_read, i2 %tmp" [src/QRD.cpp:242]   --->   Operation 106 'mux' 'tmp_s' <Predicate = (!tmp_43)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 107 [1/1] (0.52ns)   --->   "%tmp_1 = mux i16 @_ssdm_op_Mux.ap_auto.4i16.i2, i16 %HH_2_0_2_read, i16 %select_ln580_123_read, i16 %select_ln580_128_read, i16 %select_ln580_138_read, i2 %tmp" [src/QRD.cpp:242]   --->   Operation 107 'mux' 'tmp_1' <Predicate = (!tmp_43)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 108 [1/1] (0.52ns)   --->   "%tmp_2 = mux i16 @_ssdm_op_Mux.ap_auto.4i16.i2, i16 0, i16 0, i16 %select_ln580_164_read, i16 %select_ln580_169_read, i2 %tmp" [src/QRD.cpp:242]   --->   Operation 108 'mux' 'tmp_2' <Predicate = (!tmp_43)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 109 [1/1] (0.52ns)   --->   "%tmp_3 = mux i16 @_ssdm_op_Mux.ap_auto.4i16.i2, i16 %HH_6_0_2_read, i16 0, i16 0, i16 %select_ln580_189_read, i2 %tmp" [src/QRD.cpp:242]   --->   Operation 109 'mux' 'tmp_3' <Predicate = (!tmp_43)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 110 [1/1] (0.52ns)   --->   "%tmp_4 = mux i16 @_ssdm_op_Mux.ap_auto.4i16.i2, i16 %HH_1_0_0_read, i16 %select_ln580_55_read, i16 %select_ln580_61_read, i16 %select_ln580_71_read, i2 %tmp" [src/QRD.cpp:243]   --->   Operation 110 'mux' 'tmp_4' <Predicate = (!tmp_43)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 111 [1/1] (0.52ns)   --->   "%tmp_5 = mux i16 @_ssdm_op_Mux.ap_auto.4i16.i2, i16 %HH_3_0_0_read, i16 %HH_3_1_4_read, i16 %select_ln580_148_read, i16 %select_ln580_158_read, i2 %tmp" [src/QRD.cpp:243]   --->   Operation 111 'mux' 'tmp_5' <Predicate = (!tmp_43)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 112 [1/1] (0.52ns)   --->   "%tmp_6 = mux i16 @_ssdm_op_Mux.ap_auto.4i16.i2, i16 %HH_5_0_0_read, i16 %mux_case_1118_read, i16 %mux_case_581_read, i16 %select_ln580_179_read, i2 %tmp" [src/QRD.cpp:243]   --->   Operation 112 'mux' 'tmp_6' <Predicate = (!tmp_43)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 113 [1/1] (0.52ns)   --->   "%tmp_7 = mux i16 @_ssdm_op_Mux.ap_auto.4i16.i2, i16 %HH_7_0_0_read, i16 %HH_7_1_4_read, i16 %mux_case_782_read, i16 0, i2 %tmp" [src/QRD.cpp:243]   --->   Operation 113 'mux' 'tmp_7' <Predicate = (!tmp_43)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 114 [1/1] (0.85ns)   --->   "%sub_ln712 = sub i16 0, i16 %tmp_4"   --->   Operation 114 'sub' 'sub_ln712' <Predicate = (!tmp_43)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 115 [1/1] (0.72ns)   --->   "%switch_ln242 = switch i3 %empty_288, void %arrayidx817266.case.7129.0, i3 0, void %.split24._ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.1_crit_edge, i3 2, void %.split24._ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.1_crit_edge30, i3 4, void %arrayidx817266.case.5128.0" [src/QRD.cpp:242]   --->   Operation 115 'switch' 'switch_ln242' <Predicate = (!tmp_43)> <Delay = 0.72>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_s, i16 %p_0_0_03279938_lcssa1074" [src/QRD.cpp:245]   --->   Operation 116 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %sub_ln712, i16 %conv_i_i_i2390890_lcssa1042" [src/QRD.cpp:245]   --->   Operation 117 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_4, i16 %p_0_0_03278842_lcssa1010" [src/QRD.cpp:245]   --->   Operation 118 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_s, i16 %p_0_0_03279794_lcssa978" [src/QRD.cpp:245]   --->   Operation 119 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%br_ln245 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.1" [src/QRD.cpp:245]   --->   Operation 120 'br' 'br_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_s, i16 %p_0_0_03279941_lcssa1076" [src/QRD.cpp:242]   --->   Operation 121 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %sub_ln712, i16 %conv_i_i_i2390893_lcssa1044" [src/QRD.cpp:242]   --->   Operation 122 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_4, i16 %p_0_0_03278845_lcssa1012" [src/QRD.cpp:242]   --->   Operation 123 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_s, i16 %p_0_0_03279797_lcssa980" [src/QRD.cpp:242]   --->   Operation 124 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%br_ln242 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.1" [src/QRD.cpp:242]   --->   Operation 125 'br' 'br_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_s, i16 %p_0_0_03279944_lcssa1078" [src/QRD.cpp:242]   --->   Operation 126 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %sub_ln712, i16 %conv_i_i_i2390896_lcssa1046" [src/QRD.cpp:242]   --->   Operation 127 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_4, i16 %p_0_0_03278848_lcssa1014" [src/QRD.cpp:242]   --->   Operation 128 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_s, i16 %p_0_0_03279800_lcssa982" [src/QRD.cpp:242]   --->   Operation 129 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%br_ln242 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.1" [src/QRD.cpp:242]   --->   Operation 130 'br' 'br_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_s, i16 %p_0_0_03279947_lcssa1080" [src/QRD.cpp:245]   --->   Operation 131 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %sub_ln712, i16 %conv_i_i_i2390899_lcssa1048" [src/QRD.cpp:245]   --->   Operation 132 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_4, i16 %p_0_0_03278851_lcssa1016" [src/QRD.cpp:245]   --->   Operation 133 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_s, i16 %p_0_0_03279803_lcssa984" [src/QRD.cpp:245]   --->   Operation 134 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%br_ln245 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.1" [src/QRD.cpp:245]   --->   Operation 135 'br' 'br_ln245' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.85ns)   --->   "%sub_ln712_1 = sub i16 0, i16 %tmp_5"   --->   Operation 136 'sub' 'sub_ln712_1' <Predicate = (!tmp_43)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 137 [1/1] (0.72ns)   --->   "%switch_ln242 = switch i3 %empty_288, void %arrayidx817266.case.7135.1, i3 0, void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.1._ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.2_crit_edge, i3 2, void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.1._ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.2_crit_edge31, i3 4, void %arrayidx817266.case.5134.1" [src/QRD.cpp:242]   --->   Operation 137 'switch' 'switch_ln242' <Predicate = (!tmp_43)> <Delay = 0.72>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_1, i16 %p_0_0_03279925_lcssa1066" [src/QRD.cpp:245]   --->   Operation 138 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %sub_ln712_1, i16 %conv_i_i_i2390877_lcssa1034" [src/QRD.cpp:245]   --->   Operation 139 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_5, i16 %p_0_0_03278829_lcssa1002" [src/QRD.cpp:245]   --->   Operation 140 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_1, i16 %p_0_0_03279781_lcssa970" [src/QRD.cpp:245]   --->   Operation 141 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%br_ln245 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.2" [src/QRD.cpp:245]   --->   Operation 142 'br' 'br_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_1, i16 %p_0_0_03279928_lcssa1068" [src/QRD.cpp:242]   --->   Operation 143 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %sub_ln712_1, i16 %conv_i_i_i2390880_lcssa1036" [src/QRD.cpp:242]   --->   Operation 144 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_5, i16 %p_0_0_03278832_lcssa1004" [src/QRD.cpp:242]   --->   Operation 145 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_1, i16 %p_0_0_03279784_lcssa972" [src/QRD.cpp:242]   --->   Operation 146 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%br_ln242 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.2" [src/QRD.cpp:242]   --->   Operation 147 'br' 'br_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_1, i16 %p_0_0_03279931_lcssa1070" [src/QRD.cpp:242]   --->   Operation 148 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %sub_ln712_1, i16 %conv_i_i_i2390883_lcssa1038" [src/QRD.cpp:242]   --->   Operation 149 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_5, i16 %p_0_0_03278835_lcssa1006" [src/QRD.cpp:242]   --->   Operation 150 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_1, i16 %p_0_0_03279787_lcssa974" [src/QRD.cpp:242]   --->   Operation 151 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%br_ln242 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.2" [src/QRD.cpp:242]   --->   Operation 152 'br' 'br_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_1, i16 %p_0_0_03279934_lcssa1072" [src/QRD.cpp:242]   --->   Operation 153 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%store_ln712 = store i16 %sub_ln712_1, i16 %conv_i_i_i2390886_lcssa1040"   --->   Operation 154 'store' 'store_ln712' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%store_ln243 = store i16 %tmp_5, i16 %p_0_0_03278838_lcssa1008" [src/QRD.cpp:243]   --->   Operation 155 'store' 'store_ln243' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_1, i16 %p_0_0_03279790_lcssa976" [src/QRD.cpp:242]   --->   Operation 156 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%br_ln0 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.2"   --->   Operation 157 'br' 'br_ln0' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.85ns)   --->   "%sub_ln712_2 = sub i16 0, i16 %tmp_6"   --->   Operation 158 'sub' 'sub_ln712_2' <Predicate = (!tmp_43)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 159 [1/1] (0.72ns)   --->   "%switch_ln242 = switch i3 %empty_288, void %arrayidx817266.case.7141.2, i3 0, void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.2._ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.3_crit_edge, i3 2, void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.2._ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.3_crit_edge32, i3 4, void %arrayidx817266.case.5140.2" [src/QRD.cpp:242]   --->   Operation 159 'switch' 'switch_ln242' <Predicate = (!tmp_43)> <Delay = 0.72>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_2, i16 %p_0_0_03279913_lcssa1058" [src/QRD.cpp:245]   --->   Operation 160 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %sub_ln712_2, i16 %conv_i_i_i2390865_lcssa1026" [src/QRD.cpp:245]   --->   Operation 161 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_6, i16 %p_0_0_03278817_lcssa994" [src/QRD.cpp:245]   --->   Operation 162 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_2, i16 %p_0_0_03279769_lcssa962" [src/QRD.cpp:245]   --->   Operation 163 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%br_ln245 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.3" [src/QRD.cpp:245]   --->   Operation 164 'br' 'br_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_2, i16 %p_0_0_03279916_lcssa1060" [src/QRD.cpp:242]   --->   Operation 165 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %sub_ln712_2, i16 %conv_i_i_i2390868_lcssa1028" [src/QRD.cpp:242]   --->   Operation 166 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_6, i16 %p_0_0_03278820_lcssa996" [src/QRD.cpp:242]   --->   Operation 167 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_2, i16 %p_0_0_03279772_lcssa964" [src/QRD.cpp:242]   --->   Operation 168 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%br_ln242 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.3" [src/QRD.cpp:242]   --->   Operation 169 'br' 'br_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_2, i16 %p_0_0_03279919_lcssa1062" [src/QRD.cpp:242]   --->   Operation 170 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %sub_ln712_2, i16 %conv_i_i_i2390871_lcssa1030" [src/QRD.cpp:242]   --->   Operation 171 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_6, i16 %p_0_0_03278823_lcssa998" [src/QRD.cpp:242]   --->   Operation 172 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_2, i16 %p_0_0_03279775_lcssa966" [src/QRD.cpp:242]   --->   Operation 173 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%br_ln242 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.3" [src/QRD.cpp:242]   --->   Operation 174 'br' 'br_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_2, i16 %p_0_0_03279922_lcssa1064" [src/QRD.cpp:242]   --->   Operation 175 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%store_ln712 = store i16 %sub_ln712_2, i16 %conv_i_i_i2390874_lcssa1032"   --->   Operation 176 'store' 'store_ln712' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%store_ln243 = store i16 %tmp_6, i16 %p_0_0_03278826_lcssa1000" [src/QRD.cpp:243]   --->   Operation 177 'store' 'store_ln243' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_2, i16 %p_0_0_03279778_lcssa968" [src/QRD.cpp:242]   --->   Operation 178 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%br_ln0 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.3"   --->   Operation 179 'br' 'br_ln0' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.85ns)   --->   "%sub_ln712_3 = sub i16 0, i16 %tmp_7"   --->   Operation 180 'sub' 'sub_ln712_3' <Predicate = (!tmp_43)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 181 [1/1] (0.72ns)   --->   "%switch_ln242 = switch i3 %empty_288, void %arrayidx817266.case.7147.3, i3 0, void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.3._ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.4_crit_edge, i3 2, void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.split.3._ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.4_crit_edge29, i3 4, void %arrayidx817266.case.5146.3" [src/QRD.cpp:242]   --->   Operation 181 'switch' 'switch_ln242' <Predicate = (!tmp_43)> <Delay = 0.72>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_3, i16 %p_0_0_03279949_lcssa1082" [src/QRD.cpp:245]   --->   Operation 182 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %sub_ln712_3, i16 %conv_i_i_i2390901_lcssa1050" [src/QRD.cpp:245]   --->   Operation 183 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_7, i16 %p_0_0_03278853_lcssa1018" [src/QRD.cpp:245]   --->   Operation 184 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%store_ln245 = store i16 %tmp_3, i16 %p_0_0_03279805_lcssa986" [src/QRD.cpp:245]   --->   Operation 185 'store' 'store_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%br_ln245 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.4" [src/QRD.cpp:245]   --->   Operation 186 'br' 'br_ln245' <Predicate = (!tmp_43 & empty_288 == 4)> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_3, i16 %p_0_0_03279952_lcssa1084" [src/QRD.cpp:242]   --->   Operation 187 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %sub_ln712_3, i16 %conv_i_i_i2390904_lcssa1052" [src/QRD.cpp:242]   --->   Operation 188 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_7, i16 %p_0_0_03278856_lcssa1020" [src/QRD.cpp:242]   --->   Operation 189 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_3, i16 %p_0_0_03279808_lcssa988" [src/QRD.cpp:242]   --->   Operation 190 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%br_ln242 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.4" [src/QRD.cpp:242]   --->   Operation 191 'br' 'br_ln242' <Predicate = (!tmp_43 & empty_288 == 2)> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_3, i16 %p_0_0_03279955_lcssa1086" [src/QRD.cpp:242]   --->   Operation 192 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %sub_ln712_3, i16 %conv_i_i_i2390907_lcssa1054" [src/QRD.cpp:242]   --->   Operation 193 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_7, i16 %p_0_0_03278859_lcssa1022" [src/QRD.cpp:242]   --->   Operation 194 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_3, i16 %p_0_0_03279811_lcssa990" [src/QRD.cpp:242]   --->   Operation 195 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%br_ln242 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.4" [src/QRD.cpp:242]   --->   Operation 196 'br' 'br_ln242' <Predicate = (!tmp_43 & empty_288 == 0)> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_3, i16 %p_0_0_03279958_lcssa1088" [src/QRD.cpp:242]   --->   Operation 197 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%store_ln712 = store i16 %sub_ln712_3, i16 %conv_i_i_i2390910_lcssa1056"   --->   Operation 198 'store' 'store_ln712' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%store_ln243 = store i16 %tmp_7, i16 %p_0_0_03278862_lcssa1024" [src/QRD.cpp:243]   --->   Operation 199 'store' 'store_ln243' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%store_ln242 = store i16 %tmp_3, i16 %p_0_0_03279814_lcssa992" [src/QRD.cpp:242]   --->   Operation 200 'store' 'store_ln242' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%br_ln0 = br void %_ZNK13ap_fixed_baseILi16ELi8ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEngEv.exit.4"   --->   Operation 201 'br' 'br_ln0' <Predicate = (!tmp_43 & empty_288 != 0 & empty_288 != 2 & empty_288 != 4)> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.79ns)   --->   "%add_ln240 = add i4 %i_4, i4 2" [src/QRD.cpp:240]   --->   Operation 202 'add' 'add_ln240' <Predicate = (!tmp_43)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 203 [1/1] (0.42ns)   --->   "%store_ln240 = store i4 %add_ln240, i4 %i" [src/QRD.cpp:240]   --->   Operation 203 'store' 'store_ln240' <Predicate = (!tmp_43)> <Delay = 0.42>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 204 'br' 'br_ln0' <Predicate = (!tmp_43)> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%p_0_0_03279769_lcssa962_load = load i16 %p_0_0_03279769_lcssa962"   --->   Operation 205 'load' 'p_0_0_03279769_lcssa962_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%p_0_0_03279772_lcssa964_load = load i16 %p_0_0_03279772_lcssa964"   --->   Operation 206 'load' 'p_0_0_03279772_lcssa964_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%p_0_0_03279775_lcssa966_load = load i16 %p_0_0_03279775_lcssa966"   --->   Operation 207 'load' 'p_0_0_03279775_lcssa966_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%p_0_0_03279778_lcssa968_load = load i16 %p_0_0_03279778_lcssa968"   --->   Operation 208 'load' 'p_0_0_03279778_lcssa968_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%p_0_0_03279781_lcssa970_load = load i16 %p_0_0_03279781_lcssa970"   --->   Operation 209 'load' 'p_0_0_03279781_lcssa970_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "%p_0_0_03279784_lcssa972_load = load i16 %p_0_0_03279784_lcssa972"   --->   Operation 210 'load' 'p_0_0_03279784_lcssa972_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%p_0_0_03279787_lcssa974_load = load i16 %p_0_0_03279787_lcssa974"   --->   Operation 211 'load' 'p_0_0_03279787_lcssa974_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%p_0_0_03279790_lcssa976_load = load i16 %p_0_0_03279790_lcssa976"   --->   Operation 212 'load' 'p_0_0_03279790_lcssa976_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%p_0_0_03279794_lcssa978_load = load i16 %p_0_0_03279794_lcssa978"   --->   Operation 213 'load' 'p_0_0_03279794_lcssa978_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%p_0_0_03279797_lcssa980_load = load i16 %p_0_0_03279797_lcssa980"   --->   Operation 214 'load' 'p_0_0_03279797_lcssa980_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%p_0_0_03279800_lcssa982_load = load i16 %p_0_0_03279800_lcssa982"   --->   Operation 215 'load' 'p_0_0_03279800_lcssa982_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "%p_0_0_03279803_lcssa984_load = load i16 %p_0_0_03279803_lcssa984"   --->   Operation 216 'load' 'p_0_0_03279803_lcssa984_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%p_0_0_03279805_lcssa986_load = load i16 %p_0_0_03279805_lcssa986"   --->   Operation 217 'load' 'p_0_0_03279805_lcssa986_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "%p_0_0_03279808_lcssa988_load = load i16 %p_0_0_03279808_lcssa988"   --->   Operation 218 'load' 'p_0_0_03279808_lcssa988_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%p_0_0_03279811_lcssa990_load = load i16 %p_0_0_03279811_lcssa990"   --->   Operation 219 'load' 'p_0_0_03279811_lcssa990_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%p_0_0_03279814_lcssa992_load = load i16 %p_0_0_03279814_lcssa992"   --->   Operation 220 'load' 'p_0_0_03279814_lcssa992_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%p_0_0_03278817_lcssa994_load = load i16 %p_0_0_03278817_lcssa994"   --->   Operation 221 'load' 'p_0_0_03278817_lcssa994_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "%p_0_0_03278820_lcssa996_load = load i16 %p_0_0_03278820_lcssa996"   --->   Operation 222 'load' 'p_0_0_03278820_lcssa996_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%p_0_0_03278823_lcssa998_load = load i16 %p_0_0_03278823_lcssa998"   --->   Operation 223 'load' 'p_0_0_03278823_lcssa998_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%p_0_0_03278826_lcssa1000_load = load i16 %p_0_0_03278826_lcssa1000"   --->   Operation 224 'load' 'p_0_0_03278826_lcssa1000_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 225 [1/1] (0.00ns)   --->   "%p_0_0_03278829_lcssa1002_load = load i16 %p_0_0_03278829_lcssa1002"   --->   Operation 225 'load' 'p_0_0_03278829_lcssa1002_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 226 [1/1] (0.00ns)   --->   "%p_0_0_03278832_lcssa1004_load = load i16 %p_0_0_03278832_lcssa1004"   --->   Operation 226 'load' 'p_0_0_03278832_lcssa1004_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 227 [1/1] (0.00ns)   --->   "%p_0_0_03278835_lcssa1006_load = load i16 %p_0_0_03278835_lcssa1006"   --->   Operation 227 'load' 'p_0_0_03278835_lcssa1006_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "%p_0_0_03278838_lcssa1008_load = load i16 %p_0_0_03278838_lcssa1008"   --->   Operation 228 'load' 'p_0_0_03278838_lcssa1008_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 229 [1/1] (0.00ns)   --->   "%p_0_0_03278842_lcssa1010_load = load i16 %p_0_0_03278842_lcssa1010"   --->   Operation 229 'load' 'p_0_0_03278842_lcssa1010_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "%p_0_0_03278845_lcssa1012_load = load i16 %p_0_0_03278845_lcssa1012"   --->   Operation 230 'load' 'p_0_0_03278845_lcssa1012_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%p_0_0_03278848_lcssa1014_load = load i16 %p_0_0_03278848_lcssa1014"   --->   Operation 231 'load' 'p_0_0_03278848_lcssa1014_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 232 [1/1] (0.00ns)   --->   "%p_0_0_03278851_lcssa1016_load = load i16 %p_0_0_03278851_lcssa1016"   --->   Operation 232 'load' 'p_0_0_03278851_lcssa1016_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%p_0_0_03278853_lcssa1018_load = load i16 %p_0_0_03278853_lcssa1018"   --->   Operation 233 'load' 'p_0_0_03278853_lcssa1018_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 234 [1/1] (0.00ns)   --->   "%p_0_0_03278856_lcssa1020_load = load i16 %p_0_0_03278856_lcssa1020"   --->   Operation 234 'load' 'p_0_0_03278856_lcssa1020_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%p_0_0_03278859_lcssa1022_load = load i16 %p_0_0_03278859_lcssa1022"   --->   Operation 235 'load' 'p_0_0_03278859_lcssa1022_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 236 [1/1] (0.00ns)   --->   "%p_0_0_03278862_lcssa1024_load = load i16 %p_0_0_03278862_lcssa1024"   --->   Operation 236 'load' 'p_0_0_03278862_lcssa1024_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 237 [1/1] (0.00ns)   --->   "%conv_i_i_i2390865_lcssa1026_load = load i16 %conv_i_i_i2390865_lcssa1026"   --->   Operation 237 'load' 'conv_i_i_i2390865_lcssa1026_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 238 [1/1] (0.00ns)   --->   "%conv_i_i_i2390868_lcssa1028_load = load i16 %conv_i_i_i2390868_lcssa1028"   --->   Operation 238 'load' 'conv_i_i_i2390868_lcssa1028_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 239 [1/1] (0.00ns)   --->   "%conv_i_i_i2390871_lcssa1030_load = load i16 %conv_i_i_i2390871_lcssa1030"   --->   Operation 239 'load' 'conv_i_i_i2390871_lcssa1030_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 240 [1/1] (0.00ns)   --->   "%conv_i_i_i2390874_lcssa1032_load = load i16 %conv_i_i_i2390874_lcssa1032"   --->   Operation 240 'load' 'conv_i_i_i2390874_lcssa1032_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 241 [1/1] (0.00ns)   --->   "%conv_i_i_i2390877_lcssa1034_load = load i16 %conv_i_i_i2390877_lcssa1034"   --->   Operation 241 'load' 'conv_i_i_i2390877_lcssa1034_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 242 [1/1] (0.00ns)   --->   "%conv_i_i_i2390880_lcssa1036_load = load i16 %conv_i_i_i2390880_lcssa1036"   --->   Operation 242 'load' 'conv_i_i_i2390880_lcssa1036_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 243 [1/1] (0.00ns)   --->   "%conv_i_i_i2390883_lcssa1038_load = load i16 %conv_i_i_i2390883_lcssa1038"   --->   Operation 243 'load' 'conv_i_i_i2390883_lcssa1038_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 244 [1/1] (0.00ns)   --->   "%conv_i_i_i2390886_lcssa1040_load = load i16 %conv_i_i_i2390886_lcssa1040"   --->   Operation 244 'load' 'conv_i_i_i2390886_lcssa1040_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 245 [1/1] (0.00ns)   --->   "%conv_i_i_i2390890_lcssa1042_load = load i16 %conv_i_i_i2390890_lcssa1042"   --->   Operation 245 'load' 'conv_i_i_i2390890_lcssa1042_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 246 [1/1] (0.00ns)   --->   "%conv_i_i_i2390893_lcssa1044_load = load i16 %conv_i_i_i2390893_lcssa1044"   --->   Operation 246 'load' 'conv_i_i_i2390893_lcssa1044_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 247 [1/1] (0.00ns)   --->   "%conv_i_i_i2390896_lcssa1046_load = load i16 %conv_i_i_i2390896_lcssa1046"   --->   Operation 247 'load' 'conv_i_i_i2390896_lcssa1046_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 248 [1/1] (0.00ns)   --->   "%conv_i_i_i2390899_lcssa1048_load = load i16 %conv_i_i_i2390899_lcssa1048"   --->   Operation 248 'load' 'conv_i_i_i2390899_lcssa1048_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 249 [1/1] (0.00ns)   --->   "%conv_i_i_i2390901_lcssa1050_load = load i16 %conv_i_i_i2390901_lcssa1050"   --->   Operation 249 'load' 'conv_i_i_i2390901_lcssa1050_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 250 [1/1] (0.00ns)   --->   "%conv_i_i_i2390904_lcssa1052_load = load i16 %conv_i_i_i2390904_lcssa1052"   --->   Operation 250 'load' 'conv_i_i_i2390904_lcssa1052_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 251 [1/1] (0.00ns)   --->   "%conv_i_i_i2390907_lcssa1054_load = load i16 %conv_i_i_i2390907_lcssa1054"   --->   Operation 251 'load' 'conv_i_i_i2390907_lcssa1054_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 252 [1/1] (0.00ns)   --->   "%conv_i_i_i2390910_lcssa1056_load = load i16 %conv_i_i_i2390910_lcssa1056"   --->   Operation 252 'load' 'conv_i_i_i2390910_lcssa1056_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 253 [1/1] (0.00ns)   --->   "%p_0_0_03279913_lcssa1058_load = load i16 %p_0_0_03279913_lcssa1058"   --->   Operation 253 'load' 'p_0_0_03279913_lcssa1058_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 254 [1/1] (0.00ns)   --->   "%p_0_0_03279916_lcssa1060_load = load i16 %p_0_0_03279916_lcssa1060"   --->   Operation 254 'load' 'p_0_0_03279916_lcssa1060_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 255 [1/1] (0.00ns)   --->   "%p_0_0_03279919_lcssa1062_load = load i16 %p_0_0_03279919_lcssa1062"   --->   Operation 255 'load' 'p_0_0_03279919_lcssa1062_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 256 [1/1] (0.00ns)   --->   "%p_0_0_03279922_lcssa1064_load = load i16 %p_0_0_03279922_lcssa1064"   --->   Operation 256 'load' 'p_0_0_03279922_lcssa1064_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 257 [1/1] (0.00ns)   --->   "%p_0_0_03279925_lcssa1066_load = load i16 %p_0_0_03279925_lcssa1066"   --->   Operation 257 'load' 'p_0_0_03279925_lcssa1066_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 258 [1/1] (0.00ns)   --->   "%p_0_0_03279928_lcssa1068_load = load i16 %p_0_0_03279928_lcssa1068"   --->   Operation 258 'load' 'p_0_0_03279928_lcssa1068_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 259 [1/1] (0.00ns)   --->   "%p_0_0_03279931_lcssa1070_load = load i16 %p_0_0_03279931_lcssa1070"   --->   Operation 259 'load' 'p_0_0_03279931_lcssa1070_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 260 [1/1] (0.00ns)   --->   "%p_0_0_03279934_lcssa1072_load = load i16 %p_0_0_03279934_lcssa1072"   --->   Operation 260 'load' 'p_0_0_03279934_lcssa1072_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 261 [1/1] (0.00ns)   --->   "%p_0_0_03279938_lcssa1074_load = load i16 %p_0_0_03279938_lcssa1074"   --->   Operation 261 'load' 'p_0_0_03279938_lcssa1074_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 262 [1/1] (0.00ns)   --->   "%p_0_0_03279941_lcssa1076_load = load i16 %p_0_0_03279941_lcssa1076"   --->   Operation 262 'load' 'p_0_0_03279941_lcssa1076_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 263 [1/1] (0.00ns)   --->   "%p_0_0_03279944_lcssa1078_load = load i16 %p_0_0_03279944_lcssa1078"   --->   Operation 263 'load' 'p_0_0_03279944_lcssa1078_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 264 [1/1] (0.00ns)   --->   "%p_0_0_03279947_lcssa1080_load = load i16 %p_0_0_03279947_lcssa1080"   --->   Operation 264 'load' 'p_0_0_03279947_lcssa1080_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 265 [1/1] (0.00ns)   --->   "%p_0_0_03279949_lcssa1082_load = load i16 %p_0_0_03279949_lcssa1082"   --->   Operation 265 'load' 'p_0_0_03279949_lcssa1082_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 266 [1/1] (0.00ns)   --->   "%p_0_0_03279952_lcssa1084_load = load i16 %p_0_0_03279952_lcssa1084"   --->   Operation 266 'load' 'p_0_0_03279952_lcssa1084_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 267 [1/1] (0.00ns)   --->   "%p_0_0_03279955_lcssa1086_load = load i16 %p_0_0_03279955_lcssa1086"   --->   Operation 267 'load' 'p_0_0_03279955_lcssa1086_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 268 [1/1] (0.00ns)   --->   "%p_0_0_03279958_lcssa1088_load = load i16 %p_0_0_03279958_lcssa1088"   --->   Operation 268 'load' 'p_0_0_03279958_lcssa1088_load' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 269 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279958_lcssa1088_out, i16 %p_0_0_03279958_lcssa1088_load"   --->   Operation 269 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 270 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279955_lcssa1086_out, i16 %p_0_0_03279955_lcssa1086_load"   --->   Operation 270 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 271 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279952_lcssa1084_out, i16 %p_0_0_03279952_lcssa1084_load"   --->   Operation 271 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 272 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279949_lcssa1082_out, i16 %p_0_0_03279949_lcssa1082_load"   --->   Operation 272 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 273 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279947_lcssa1080_out, i16 %p_0_0_03279947_lcssa1080_load"   --->   Operation 273 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 274 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279944_lcssa1078_out, i16 %p_0_0_03279944_lcssa1078_load"   --->   Operation 274 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 275 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279941_lcssa1076_out, i16 %p_0_0_03279941_lcssa1076_load"   --->   Operation 275 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 276 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279938_lcssa1074_out, i16 %p_0_0_03279938_lcssa1074_load"   --->   Operation 276 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 277 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279934_lcssa1072_out, i16 %p_0_0_03279934_lcssa1072_load"   --->   Operation 277 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 278 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279931_lcssa1070_out, i16 %p_0_0_03279931_lcssa1070_load"   --->   Operation 278 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 279 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279928_lcssa1068_out, i16 %p_0_0_03279928_lcssa1068_load"   --->   Operation 279 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 280 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279925_lcssa1066_out, i16 %p_0_0_03279925_lcssa1066_load"   --->   Operation 280 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 281 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279922_lcssa1064_out, i16 %p_0_0_03279922_lcssa1064_load"   --->   Operation 281 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 282 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279919_lcssa1062_out, i16 %p_0_0_03279919_lcssa1062_load"   --->   Operation 282 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 283 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279916_lcssa1060_out, i16 %p_0_0_03279916_lcssa1060_load"   --->   Operation 283 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 284 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279913_lcssa1058_out, i16 %p_0_0_03279913_lcssa1058_load"   --->   Operation 284 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 285 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390910_lcssa1056_out, i16 %conv_i_i_i2390910_lcssa1056_load"   --->   Operation 285 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 286 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390907_lcssa1054_out, i16 %conv_i_i_i2390907_lcssa1054_load"   --->   Operation 286 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 287 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390904_lcssa1052_out, i16 %conv_i_i_i2390904_lcssa1052_load"   --->   Operation 287 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 288 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390901_lcssa1050_out, i16 %conv_i_i_i2390901_lcssa1050_load"   --->   Operation 288 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 289 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390899_lcssa1048_out, i16 %conv_i_i_i2390899_lcssa1048_load"   --->   Operation 289 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 290 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390896_lcssa1046_out, i16 %conv_i_i_i2390896_lcssa1046_load"   --->   Operation 290 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 291 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390893_lcssa1044_out, i16 %conv_i_i_i2390893_lcssa1044_load"   --->   Operation 291 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 292 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390890_lcssa1042_out, i16 %conv_i_i_i2390890_lcssa1042_load"   --->   Operation 292 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 293 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390886_lcssa1040_out, i16 %conv_i_i_i2390886_lcssa1040_load"   --->   Operation 293 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 294 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390883_lcssa1038_out, i16 %conv_i_i_i2390883_lcssa1038_load"   --->   Operation 294 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 295 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390880_lcssa1036_out, i16 %conv_i_i_i2390880_lcssa1036_load"   --->   Operation 295 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 296 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390877_lcssa1034_out, i16 %conv_i_i_i2390877_lcssa1034_load"   --->   Operation 296 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 297 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390874_lcssa1032_out, i16 %conv_i_i_i2390874_lcssa1032_load"   --->   Operation 297 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 298 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390871_lcssa1030_out, i16 %conv_i_i_i2390871_lcssa1030_load"   --->   Operation 298 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 299 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390868_lcssa1028_out, i16 %conv_i_i_i2390868_lcssa1028_load"   --->   Operation 299 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 300 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_i_i_i2390865_lcssa1026_out, i16 %conv_i_i_i2390865_lcssa1026_load"   --->   Operation 300 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 301 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278862_lcssa1024_out, i16 %p_0_0_03278862_lcssa1024_load"   --->   Operation 301 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 302 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278859_lcssa1022_out, i16 %p_0_0_03278859_lcssa1022_load"   --->   Operation 302 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 303 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278856_lcssa1020_out, i16 %p_0_0_03278856_lcssa1020_load"   --->   Operation 303 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 304 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278853_lcssa1018_out, i16 %p_0_0_03278853_lcssa1018_load"   --->   Operation 304 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 305 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278851_lcssa1016_out, i16 %p_0_0_03278851_lcssa1016_load"   --->   Operation 305 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 306 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278848_lcssa1014_out, i16 %p_0_0_03278848_lcssa1014_load"   --->   Operation 306 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 307 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278845_lcssa1012_out, i16 %p_0_0_03278845_lcssa1012_load"   --->   Operation 307 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 308 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278842_lcssa1010_out, i16 %p_0_0_03278842_lcssa1010_load"   --->   Operation 308 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 309 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278838_lcssa1008_out, i16 %p_0_0_03278838_lcssa1008_load"   --->   Operation 309 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 310 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278835_lcssa1006_out, i16 %p_0_0_03278835_lcssa1006_load"   --->   Operation 310 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 311 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278832_lcssa1004_out, i16 %p_0_0_03278832_lcssa1004_load"   --->   Operation 311 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 312 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278829_lcssa1002_out, i16 %p_0_0_03278829_lcssa1002_load"   --->   Operation 312 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 313 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278826_lcssa1000_out, i16 %p_0_0_03278826_lcssa1000_load"   --->   Operation 313 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 314 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278823_lcssa998_out, i16 %p_0_0_03278823_lcssa998_load"   --->   Operation 314 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 315 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278820_lcssa996_out, i16 %p_0_0_03278820_lcssa996_load"   --->   Operation 315 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 316 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03278817_lcssa994_out, i16 %p_0_0_03278817_lcssa994_load"   --->   Operation 316 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 317 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279814_lcssa992_out, i16 %p_0_0_03279814_lcssa992_load"   --->   Operation 317 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 318 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279811_lcssa990_out, i16 %p_0_0_03279811_lcssa990_load"   --->   Operation 318 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 319 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279808_lcssa988_out, i16 %p_0_0_03279808_lcssa988_load"   --->   Operation 319 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 320 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279805_lcssa986_out, i16 %p_0_0_03279805_lcssa986_load"   --->   Operation 320 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 321 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279803_lcssa984_out, i16 %p_0_0_03279803_lcssa984_load"   --->   Operation 321 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 322 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279800_lcssa982_out, i16 %p_0_0_03279800_lcssa982_load"   --->   Operation 322 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 323 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279797_lcssa980_out, i16 %p_0_0_03279797_lcssa980_load"   --->   Operation 323 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 324 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279794_lcssa978_out, i16 %p_0_0_03279794_lcssa978_load"   --->   Operation 324 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 325 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279790_lcssa976_out, i16 %p_0_0_03279790_lcssa976_load"   --->   Operation 325 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 326 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279787_lcssa974_out, i16 %p_0_0_03279787_lcssa974_load"   --->   Operation 326 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 327 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279784_lcssa972_out, i16 %p_0_0_03279784_lcssa972_load"   --->   Operation 327 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 328 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279781_lcssa970_out, i16 %p_0_0_03279781_lcssa970_load"   --->   Operation 328 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 329 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279778_lcssa968_out, i16 %p_0_0_03279778_lcssa968_load"   --->   Operation 329 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 330 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279775_lcssa966_out, i16 %p_0_0_03279775_lcssa966_load"   --->   Operation 330 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 331 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279772_lcssa964_out, i16 %p_0_0_03279772_lcssa964_load"   --->   Operation 331 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 332 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %p_0_0_03279769_lcssa962_out, i16 %p_0_0_03279769_lcssa962_load"   --->   Operation 332 'write' 'write_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+ST_1 : Operation 333 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 333 'ret' 'ret_ln0' <Predicate = (tmp_43)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 30ns, clock uncertainty: 8.1ns.
+
+ <State 1>: 1.38ns
+The critical path consists of the following:
+	'alloca' operation ('i') [92]  (0 ns)
+	'load' operation ('i') on local variable 'i' [187]  (0 ns)
+	'mux' operation ('tmp_5', src/QRD.cpp:243) [201]  (0.525 ns)
+	'sub' operation ('sub_ln712_1') [231]  (0.853 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

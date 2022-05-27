@@ -1,0 +1,494 @@
+<stg><name>Rayleigh</name>
+
+
+<trans_list>
+
+<trans id="28" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="29" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="30" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="31" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="32" from="5" to="6">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="33" from="6" to="7">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="34" from="7" to="8">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="64">
+<![CDATA[
+codeRepl7:0 %rngMT19937ICN_uniformRNG_mt_odd_0_V = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="rngMT19937ICN_uniformRNG_mt_odd_0_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="32" op_0_bw="64">
+<![CDATA[
+codeRepl7:1 %rngMT19937ICN_1 = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="rngMT19937ICN_1"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="32" op_0_bw="64">
+<![CDATA[
+codeRepl7:2 %rngMT19937ICN_uniformRNG_mt_even_0_V = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="rngMT19937ICN_uniformRNG_mt_even_0_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="32" op_0_bw="64">
+<![CDATA[
+codeRepl7:3 %rngMT19937ICN_3 = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="rngMT19937ICN_3"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="64" op_0_bw="64">
+<![CDATA[
+codeRepl7:4 %Hr = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="Hr"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="64" op_0_bw="64">
+<![CDATA[
+codeRepl7:5 %Hi = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="Hi"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="128" op_0_bw="128" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="6">
+<![CDATA[
+codeRepl7:6 %call_ret = call i128 @seedInitialization, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i32 %rngMT19937ICN_1, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_3, i6 37
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="16" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="128" op_0_bw="128" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="6">
+<![CDATA[
+codeRepl7:6 %call_ret = call i128 @seedInitialization, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i32 %rngMT19937ICN_1, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_3, i6 37
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+
+<operation id="17" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="32" op_0_bw="128">
+<![CDATA[
+codeRepl7:7 %rngMT19937ICN_uniformRNG_x_k_p_0_V = extractvalue i128 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="rngMT19937ICN_uniformRNG_x_k_p_0_V"/></StgValue>
+</operation>
+
+<operation id="18" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="32" op_0_bw="128">
+<![CDATA[
+codeRepl7:8 %rngMT19937ICN_uniformRNG_x_k_p_1_V = extractvalue i128 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="rngMT19937ICN_uniformRNG_x_k_p_1_V"/></StgValue>
+</operation>
+
+<operation id="19" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="32" op_0_bw="128">
+<![CDATA[
+codeRepl7:9 %rngMT19937ICN_uniformRNG_x_k_p_2_V = extractvalue i128 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="rngMT19937ICN_uniformRNG_x_k_p_2_V"/></StgValue>
+</operation>
+
+<operation id="20" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="32" op_0_bw="128">
+<![CDATA[
+codeRepl7:10 %rngMT19937ICN_uniformRNG_x_k_p_m_V = extractvalue i128 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="rngMT19937ICN_uniformRNG_x_k_p_m_V"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="21" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="64" op_6_bw="64" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0">
+<![CDATA[
+codeRepl7:11 %call_ln1143 = call void @Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2, i32 %rngMT19937ICN_uniformRNG_x_k_p_0_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_1_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_m_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_2_V, i64 %Hr, i64 %Hi, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V
+
+]]></Node>
+<StgValue><ssdm name="call_ln1143"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="22" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="64" op_6_bw="64" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0">
+<![CDATA[
+codeRepl7:11 %call_ln1143 = call void @Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2, i32 %rngMT19937ICN_uniformRNG_x_k_p_0_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_1_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_m_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_2_V, i64 %Hr, i64 %Hi, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V
+
+]]></Node>
+<StgValue><ssdm name="call_ln1143"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="23" st_id="5" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64" op_4_bw="0" op_5_bw="0">
+<![CDATA[
+codeRepl7:12 %call_ln0 = call void @Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4, i64 %Hr, i64 %Hi, i64 %H_rvd
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="24" st_id="6" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64" op_4_bw="0" op_5_bw="0">
+<![CDATA[
+codeRepl7:12 %call_ln0 = call void @Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4, i64 %Hr, i64 %Hi, i64 %H_rvd
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="7" st_id="7">
+
+<operation id="25" st_id="7" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+codeRepl7:13 %call_ln0 = call void @Rayleigh_Pipeline_VITIS_LOOP_67_6, i64 %H_rvd, i64 %H_mul_x
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="8" st_id="8">
+
+<operation id="26" st_id="8" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+codeRepl7:13 %call_ln0 = call void @Rayleigh_Pipeline_VITIS_LOOP_67_6, i64 %H_rvd, i64 %H_mul_x
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+
+<operation id="27" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="0">
+<![CDATA[
+codeRepl7:14 %ret_ln78 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln78"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="35" name="H_rvd" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="H_rvd"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="36" name="H_mul_x" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="H_mul_x"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="38" from="StgValue_37" to="rngMT19937ICN_uniformRNG_mt_odd_0_V" fromId="37" toId="9">
+</dataflow>
+<dataflow id="39" from="StgValue_37" to="rngMT19937ICN_1" fromId="37" toId="10">
+</dataflow>
+<dataflow id="40" from="StgValue_37" to="rngMT19937ICN_uniformRNG_mt_even_0_V" fromId="37" toId="11">
+</dataflow>
+<dataflow id="41" from="StgValue_37" to="rngMT19937ICN_3" fromId="37" toId="12">
+</dataflow>
+<dataflow id="42" from="StgValue_37" to="Hr" fromId="37" toId="13">
+</dataflow>
+<dataflow id="43" from="StgValue_37" to="Hi" fromId="37" toId="14">
+</dataflow>
+<dataflow id="45" from="seedInitialization" to="call_ret" fromId="44" toId="15">
+</dataflow>
+<dataflow id="46" from="rngMT19937ICN_uniformRNG_mt_odd_0_V" to="call_ret" fromId="9" toId="15">
+</dataflow>
+<dataflow id="47" from="rngMT19937ICN_1" to="call_ret" fromId="10" toId="15">
+</dataflow>
+<dataflow id="48" from="rngMT19937ICN_uniformRNG_mt_even_0_V" to="call_ret" fromId="11" toId="15">
+</dataflow>
+<dataflow id="49" from="rngMT19937ICN_3" to="call_ret" fromId="12" toId="15">
+</dataflow>
+<dataflow id="51" from="StgValue_50" to="call_ret" fromId="50" toId="15">
+</dataflow>
+<dataflow id="52" from="seedInitialization" to="call_ret" fromId="44" toId="16">
+</dataflow>
+<dataflow id="53" from="rngMT19937ICN_uniformRNG_mt_odd_0_V" to="call_ret" fromId="9" toId="16">
+</dataflow>
+<dataflow id="54" from="rngMT19937ICN_1" to="call_ret" fromId="10" toId="16">
+</dataflow>
+<dataflow id="55" from="rngMT19937ICN_uniformRNG_mt_even_0_V" to="call_ret" fromId="11" toId="16">
+</dataflow>
+<dataflow id="56" from="rngMT19937ICN_3" to="call_ret" fromId="12" toId="16">
+</dataflow>
+<dataflow id="57" from="StgValue_50" to="call_ret" fromId="50" toId="16">
+</dataflow>
+<dataflow id="58" from="call_ret" to="rngMT19937ICN_uniformRNG_x_k_p_0_V" fromId="16" toId="17">
+</dataflow>
+<dataflow id="59" from="call_ret" to="rngMT19937ICN_uniformRNG_x_k_p_1_V" fromId="16" toId="18">
+</dataflow>
+<dataflow id="60" from="call_ret" to="rngMT19937ICN_uniformRNG_x_k_p_2_V" fromId="16" toId="19">
+</dataflow>
+<dataflow id="61" from="call_ret" to="rngMT19937ICN_uniformRNG_x_k_p_m_V" fromId="16" toId="20">
+</dataflow>
+<dataflow id="63" from="Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2" to="call_ln1143" fromId="62" toId="21">
+</dataflow>
+<dataflow id="64" from="rngMT19937ICN_uniformRNG_x_k_p_0_V" to="call_ln1143" fromId="17" toId="21">
+</dataflow>
+<dataflow id="65" from="rngMT19937ICN_uniformRNG_x_k_p_1_V" to="call_ln1143" fromId="18" toId="21">
+</dataflow>
+<dataflow id="66" from="rngMT19937ICN_uniformRNG_x_k_p_m_V" to="call_ln1143" fromId="20" toId="21">
+</dataflow>
+<dataflow id="67" from="rngMT19937ICN_uniformRNG_x_k_p_2_V" to="call_ln1143" fromId="19" toId="21">
+</dataflow>
+<dataflow id="68" from="Hr" to="call_ln1143" fromId="13" toId="21">
+</dataflow>
+<dataflow id="69" from="Hi" to="call_ln1143" fromId="14" toId="21">
+</dataflow>
+<dataflow id="70" from="rngMT19937ICN_uniformRNG_mt_even_0_V" to="call_ln1143" fromId="11" toId="21">
+</dataflow>
+<dataflow id="71" from="rngMT19937ICN_uniformRNG_mt_odd_0_V" to="call_ln1143" fromId="9" toId="21">
+</dataflow>
+<dataflow id="72" from="Rayleigh_Pipeline_VITIS_LOOP_28_1_VITIS_LOOP_29_2" to="call_ln1143" fromId="62" toId="22">
+</dataflow>
+<dataflow id="73" from="rngMT19937ICN_uniformRNG_x_k_p_0_V" to="call_ln1143" fromId="17" toId="22">
+</dataflow>
+<dataflow id="74" from="rngMT19937ICN_uniformRNG_x_k_p_1_V" to="call_ln1143" fromId="18" toId="22">
+</dataflow>
+<dataflow id="75" from="rngMT19937ICN_uniformRNG_x_k_p_m_V" to="call_ln1143" fromId="20" toId="22">
+</dataflow>
+<dataflow id="76" from="rngMT19937ICN_uniformRNG_x_k_p_2_V" to="call_ln1143" fromId="19" toId="22">
+</dataflow>
+<dataflow id="77" from="Hr" to="call_ln1143" fromId="13" toId="22">
+</dataflow>
+<dataflow id="78" from="Hi" to="call_ln1143" fromId="14" toId="22">
+</dataflow>
+<dataflow id="79" from="rngMT19937ICN_uniformRNG_mt_even_0_V" to="call_ln1143" fromId="11" toId="22">
+</dataflow>
+<dataflow id="80" from="rngMT19937ICN_uniformRNG_mt_odd_0_V" to="call_ln1143" fromId="9" toId="22">
+</dataflow>
+<dataflow id="82" from="Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4" to="call_ln0" fromId="81" toId="23">
+</dataflow>
+<dataflow id="83" from="Hr" to="call_ln0" fromId="13" toId="23">
+</dataflow>
+<dataflow id="84" from="Hi" to="call_ln0" fromId="14" toId="23">
+</dataflow>
+<dataflow id="85" from="H_rvd" to="call_ln0" fromId="35" toId="23">
+</dataflow>
+<dataflow id="86" from="Rayleigh_Pipeline_VITIS_LOOP_39_3_VITIS_LOOP_40_4" to="call_ln0" fromId="81" toId="24">
+</dataflow>
+<dataflow id="87" from="Hr" to="call_ln0" fromId="13" toId="24">
+</dataflow>
+<dataflow id="88" from="Hi" to="call_ln0" fromId="14" toId="24">
+</dataflow>
+<dataflow id="89" from="H_rvd" to="call_ln0" fromId="35" toId="24">
+</dataflow>
+<dataflow id="91" from="Rayleigh_Pipeline_VITIS_LOOP_67_6" to="call_ln0" fromId="90" toId="25">
+</dataflow>
+<dataflow id="92" from="H_rvd" to="call_ln0" fromId="35" toId="25">
+</dataflow>
+<dataflow id="93" from="H_mul_x" to="call_ln0" fromId="36" toId="25">
+</dataflow>
+<dataflow id="94" from="Rayleigh_Pipeline_VITIS_LOOP_67_6" to="call_ln0" fromId="90" toId="26">
+</dataflow>
+<dataflow id="95" from="H_rvd" to="call_ln0" fromId="35" toId="26">
+</dataflow>
+<dataflow id="96" from="H_mul_x" to="call_ln0" fromId="36" toId="26">
+</dataflow>
+</dataflows>
+
+
+</stg>
