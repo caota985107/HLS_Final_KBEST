@@ -1,0 +1,106 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'g110064521' on host 'ic22' (Linux_x86_64 version 3.10.0-1160.45.1.el7.x86_64) on Fri May 27 17:25:43 CST 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2'
+Sourcing Tcl script '/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/MIMO/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: open_project MIMO 
+INFO: [HLS 200-10] Opening project '/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/MIMO'.
+INFO: [HLS 200-1510] Running: set_top TOP 
+INFO: [HLS 200-1510] Running: add_files src/utils.hpp 
+INFO: [HLS 200-10] Adding design file 'src/utils.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/rng.hpp 
+INFO: [HLS 200-10] Adding design file 'src/rng.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/normal_rng.hpp 
+INFO: [HLS 200-10] Adding design file 'src/normal_rng.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/normal_rng.cpp 
+INFO: [HLS 200-10] Adding design file 'src/normal_rng.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/dc.h 
+INFO: [HLS 200-10] Adding design file 'src/dc.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/ap_int.h 
+INFO: [HLS 200-10] Adding design file 'src/ap_int.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/aes.h 
+INFO: [HLS 200-10] Adding design file 'src/aes.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/aes.cpp 
+INFO: [HLS 200-10] Adding design file 'src/aes.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/Rayleigh.cpp 
+INFO: [HLS 200-10] Adding design file 'src/Rayleigh.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/QRD.h 
+INFO: [HLS 200-10] Adding design file 'src/QRD.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/QRD.cpp 
+INFO: [HLS 200-10] Adding design file 'src/QRD.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/Modulation.cpp 
+INFO: [HLS 200-10] Adding design file 'src/Modulation.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/DeModulation.cpp 
+INFO: [HLS 200-10] Adding design file 'src/DeModulation.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/AWGN.cpp 
+INFO: [HLS 200-10] Adding design file 'src/AWGN.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb src/TESTBENCH.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'src/TESTBENCH.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/MIMO/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 30 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name TOP TOP 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../src/QRD.cpp in debug mode
+   Generating csim.exe
+--- Results from the TOP function. ---
+--- input_stream.data ---
+amazing_hls_work
+
+--- output_stream.data ---
+¹÷ëx±ÎŽÐ›0xÑ°ô8
+
+--- de_in.data (estimated Encrypted signal)---
+¹÷ëx±ÎŽÐ›0xÑ°ô8
+
+--- de_out.data (estimated Decrypted signal) ---
+amazing_hls_work
+
+
+
+--- Results from the Testbench. ---
+--- The Channel H (Real-Value Decomposition) ---
+  0.871094  -0.046875   1.382812  -0.437500   0.496094   0.390625   1.347656   0.746094 
+  0.042969   0.871094   0.433594   1.382812  -0.394531   0.496094  -0.750000   1.347656 
+ -0.238281  -0.339844   0.433594   1.121094   0.117188   0.390625  -1.500000   1.062500 
+  0.335938  -0.238281  -1.125000   0.433594  -0.394531   0.117188  -1.066406  -1.500000 
+ -0.441406  -0.703125   0.804688  -0.460938  -0.812500  -1.031250   2.019531   0.214844 
+  0.699219  -0.441406   0.457031   0.804688   1.027344  -0.812500  -0.218750   2.019531 
+ -0.593750   0.746094   1.742188  -0.351562  -0.496094   0.273438  -0.539062  -0.386719 
+ -0.750000  -0.593750   0.347656   1.742188  -0.277344  -0.496094   0.382812  -0.539062 
+
+ORIGIN SIGNAL is : 
+ -0.710938
+ -0.710938
+ -0.710938
+  0.707031
+  0.707031
+  0.707031
+ -0.710938
+ -0.710938
+
+SIGNAL after KBEST: 
+ -1.000000
+ -1.000000
+ -1.000000
+  1.000000
+  1.000000
+  1.000000
+ -1.000000
+ -1.000000
+
+Decrypt Message : 
+amazing_hls_work
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.98 seconds. CPU system time: 0.61 seconds. Elapsed time: 4.18 seconds; current allocated memory: -937.109 MB.
+INFO: [HLS 200-112] Total CPU user time: 7.14 seconds. Total CPU system time: 1.23 seconds. Total elapsed time: 6.48 seconds; peak allocated memory: 264.164 MB.

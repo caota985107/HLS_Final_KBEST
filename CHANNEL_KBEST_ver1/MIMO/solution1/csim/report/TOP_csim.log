@@ -1,8 +1,12 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../src/TESTBENCH.cpp in debug mode
+   Compiling ../../../../src/normal_rng.cpp in debug mode
    Compiling ../../../../src/aes.cpp in debug mode
+   Compiling ../../../../src/Rayleigh.cpp in debug mode
    Compiling ../../../../src/QRD.cpp in debug mode
+   Compiling ../../../../src/Modulation.cpp in debug mode
+   Compiling ../../../../src/AWGN.cpp in debug mode
    Generating csim.exe
   0.871094  -0.046875   1.382812  -0.437500   0.496094   0.390625   1.347656   0.746094 
   0.042969   0.871094   0.433594   1.382812  -0.394531   0.496094  -0.750000   1.347656 

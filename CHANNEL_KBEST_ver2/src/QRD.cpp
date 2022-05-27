@@ -453,28 +453,41 @@ void TOP(FIXED_LEN xxr[size_H], FIXED_LEN xxi[size_H], FIXED_LEN out[8], FIXED_L
 	ap_uint<32> seed = 37;
 	int i, j, k;
 
-	char plain[17] = "hello_world_aes_";
-	char key[17] = "hello_world_aes_";
+	char plain[17] = "amazing_hls_work";
+	char key[17] = "finalprj_aes_128";
 	int len = 16;
 	int in_char_len[3] = {16,0,0 };
 	my_stream_type output_stream, input_stream;
 	input_stream.user = 1;
 	input_stream.last = 1;
 
-	for(int i=0;i<16;i++)
+	for(int i=0;i<16;i++){ // 2022 05 27 i should be go to i<17
 		input_stream.data[i] = plain[i];
+	}
 
 	AES_En_De(&input_stream, &output_stream, in_char_len, key);
+//---------------------------------------------------------- input_stream is my plain data
+//---------------------------------------------------------- output_stream is my Encrypted data
+
+	cout << "--- input_stream.data ---" << endl;
+	cout << input_stream.data << endl;
+	cout << endl;
+
+	cout << "--- output_stream.data ---" << endl;
+	cout << output_stream.data << endl;
+	cout << endl;
+
+
 
 	int index;
-	ap_uint<8> decimal;
+	ap_uint<32> decimal;//<8>
 	char correct[16];
-
+	//----------------------------------------------------------
 	for(index=0; index<16; index++){
 		decimal = (int)output_stream.data[index];
 		//ap_uint<8> decimal = (int)'h';
 
-		// ASE END
+		// AES END
 		double xr[size_H], xi[size_H];
 		Modulation(decimal, xr, xi);
 
@@ -544,9 +557,21 @@ void TOP(FIXED_LEN xxr[size_H], FIXED_LEN xxi[size_H], FIXED_LEN out[8], FIXED_L
 		out_data[i] = de_out.data[i];
 	}
 
+	cout << "--- de_in.data (estimated Encrypted signal)---" << endl;
+	cout << de_in.data << endl;
+	cout << endl;
 
+	cout << "--- de_out.data (estimated Decrypted signal) ---" << endl;
 	cout << de_out.data << endl;
+	cout << endl;
 
+
+/*
+FILE         *fp;
+fp=fopen("../../../../my_out.txt","w");
+fprintf(fp,de_out.data);
+fclose(fp);
+*/
 
 }
 

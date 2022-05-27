@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="AWGN.cpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\AWGN.cpp"/>
-    <originFiles name="DeModulation.cpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\DeModulation.cpp"/>
-    <originFiles name="Modulation.cpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\Modulation.cpp"/>
-    <originFiles name="QRD.cpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\QRD.cpp"/>
-    <originFiles name="QRD.h" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\QRD.h"/>
-    <originFiles name="Rayleigh.cpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\Rayleigh.cpp"/>
-    <originFiles name="aes.cpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\aes.cpp"/>
-    <originFiles name="aes.h" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\aes.h"/>
-    <originFiles name="ap_int.h" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\ap_int.h"/>
-    <originFiles name="dc.h" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\dc.h"/>
-    <originFiles name="normal_rng.cpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\normal_rng.cpp"/>
-    <originFiles name="normal_rng.hpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\normal_rng.hpp"/>
-    <originFiles name="rng.hpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\rng.hpp"/>
-    <originFiles name="utils.hpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\utils.hpp"/>
+    <originFiles name="AWGN.cpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/AWGN.cpp"/>
+    <originFiles name="DeModulation.cpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/DeModulation.cpp"/>
+    <originFiles name="Modulation.cpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/Modulation.cpp"/>
+    <originFiles name="QRD.cpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/QRD.cpp"/>
+    <originFiles name="QRD.h" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/QRD.h"/>
+    <originFiles name="Rayleigh.cpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/Rayleigh.cpp"/>
+    <originFiles name="aes.cpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/aes.cpp"/>
+    <originFiles name="aes.h" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/aes.h"/>
+    <originFiles name="ap_int.h" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/ap_int.h"/>
+    <originFiles name="dc.h" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/dc.h"/>
+    <originFiles name="normal_rng.cpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/normal_rng.cpp"/>
+    <originFiles name="normal_rng.hpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/normal_rng.hpp"/>
+    <originFiles name="rng.hpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/rng.hpp"/>
+    <originFiles name="utils.hpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/utils.hpp"/>
   </source>
   <testbench>
-    <originFiles name="TESTBENCH.cpp" path="D:\NTHU\HLS\FINAL\CHANNEL_KBEST\src\TESTBENCH.cpp"/>
+    <originFiles name="TESTBENCH.cpp" path="/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver2/src/TESTBENCH.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

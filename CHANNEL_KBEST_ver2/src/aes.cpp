@@ -138,7 +138,7 @@ static int T(int num, int round) {
 	int i;
 	int result;
 	splitIntToArray(num, numArray);
-	leftLoop4int(numArray, 1);//¦r´`Àô 
+	leftLoop4int(numArray, 1);//ï¿½rï¿½`ï¿½ï¿½ 
 
 
 	T_label4:for(i = 0; i < 4; i++)
@@ -318,7 +318,7 @@ void aes_return(char *p, int plen){
 	aes_return_label23:for(k = 0; k < plen; k += 16) {
 		convertToIntArray(p + k, pArray);
 
-		addRoundKey(pArray, 0);//¤@¶}©lªº½ü±KÆ_¥[
+		addRoundKey(pArray, 0);//ï¿½@ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½_ï¿½[
 
 		aes_return_label12:for(i = 1; i < 10; i++){
 
@@ -332,9 +332,9 @@ void aes_return(char *p, int plen){
 
 		}
 
-		subBytes(pArray);//¦r¸`¥N´« 
+		subBytes(pArray);//ï¿½rï¿½`ï¿½Nï¿½ï¿½ 
 
-		shiftRows(pArray);//¦æ²¾¦ì
+		shiftRows(pArray);//ï¿½æ²¾ï¿½ï¿½
 
 		addRoundKey(pArray, 10);
 
@@ -496,7 +496,7 @@ void AES_En_De_test(char bit128in_out[16], int in_char_len[3], char key[16] )
 
 	if( strcmp(temp_key,key)!=0 )
 	{
-		extendKey(key);//ÂX®i±KÆ_ 
+		extendKey(key);//ï¿½Xï¿½iï¿½Kï¿½_ 
 		strcpy(temp_key,key);
 		printf("***extendkey\n");
 	}

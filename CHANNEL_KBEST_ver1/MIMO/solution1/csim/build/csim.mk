@@ -16,21 +16,22 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../src/TESTBENCH.cpp ../../../../src/normal_rng.cpp ../../../../src/aes.cpp ../../../../src/Rayleigh.cpp ../../../../src/QRD.cpp ../../../../src/AWGN.cpp
+HLS_SOURCES = ../../../../src/TESTBENCH.cpp ../../../../src/normal_rng.cpp ../../../../src/aes.cpp ../../../../src/Rayleigh.cpp ../../../../src/QRD.cpp ../../../../src/Modulation.cpp ../../../../src/AWGN.cpp
 
 override TARGET := csim.exe
 
-AUTOPILOT_ROOT := D:/Xilinx/Vitis_HLS/2021.2
-AUTOPILOT_MACH := win64
+AUTOPILOT_ROOT := /opt/Xilinx/Vitis_HLS/2021.2
+AUTOPILOT_MACH := lnx64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
   IFLAG += -m32
 endif
+IFLAG += -fPIC
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := D:/Xilinx/Vitis_HLS/2021.2/tps/win64/msys64/mingw64/bin
+  AP_GCC_PATH := /opt/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
-AP_CLANG_PATH := ${AUTOPILOT_ROOT}/tps/win64/msys64/mingw64/bin
+AP_CLANG_PATH := ${AUTOPILOT_TOOL}/clang-3.9/bin
 AUTOPILOT_TECH := ${AUTOPILOT_ROOT}/common/technology
 
 
@@ -54,8 +55,6 @@ IFLAG += -D__SIM_DDS__
 IFLAG += -D__DSP48E2__
 IFLAG += -Wno-unknown-pragmas 
 IFLAG += -g
-IFLAG += -DNT
-LFLAG += -Wl,--enable-auto-import 
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += -Werror=return-type
 TOOLCHAIN += 
@@ -97,6 +96,12 @@ $(ObjDir)/QRD.o: ../../../../src/QRD.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/QRD.d
+
+$(ObjDir)/Modulation.o: ../../../../src/Modulation.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../src/Modulation.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/Modulation.d
 
 $(ObjDir)/AWGN.o: ../../../../src/AWGN.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../src/AWGN.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

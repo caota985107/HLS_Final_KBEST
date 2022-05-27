@@ -29,102 +29,102 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/MIMO/.apc/.src</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/MIMO/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/MIMO/.apc/.tb</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/MIMO/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/MIMO/solution1/.tcls</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/MIMO/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/AWGN.cpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/AWGN.cpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/AWGN.cpp</location>
 		</link>
 		<link>
 			<name>source/Modulation.cpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/Modulation.cpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/Modulation.cpp</location>
 		</link>
 		<link>
 			<name>source/QRD.cpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/QRD.cpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/QRD.cpp</location>
 		</link>
 		<link>
 			<name>source/QRD.h</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/QRD.h</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/QRD.h</location>
 		</link>
 		<link>
 			<name>source/Rayleigh.cpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/Rayleigh.cpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/Rayleigh.cpp</location>
 		</link>
 		<link>
 			<name>source/aes.cpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/aes.cpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/aes.cpp</location>
 		</link>
 		<link>
 			<name>source/aes.h</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/aes.h</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/aes.h</location>
 		</link>
 		<link>
 			<name>source/ap_int.h</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/ap_int.h</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/ap_int.h</location>
 		</link>
 		<link>
 			<name>source/dc.h</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/dc.h</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/dc.h</location>
 		</link>
 		<link>
 			<name>source/normal_rng.cpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/normal_rng.cpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/normal_rng.cpp</location>
 		</link>
 		<link>
 			<name>source/normal_rng.hpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/normal_rng.hpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/normal_rng.hpp</location>
 		</link>
 		<link>
 			<name>source/rng.hpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/rng.hpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/rng.hpp</location>
 		</link>
 		<link>
 			<name>source/utils.hpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/utils.hpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/utils.hpp</location>
 		</link>
 		<link>
 			<name>testbench/TESTBENCH.cpp</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/src/TESTBENCH.cpp</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/src/TESTBENCH.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/MIMO/solution1/solution1.directive</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/MIMO/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/MIMO/solution1/directives.tcl</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/MIMO/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>D:/NTHU/HLS/FINAL/CHANNEL_KBEST/MIMO/solution1/script.tcl</location>
+			<location>/users/course/2022S/HLS17000000/g110064521/HLS_Final_KBEST/CHANNEL_KBEST_ver1/MIMO/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

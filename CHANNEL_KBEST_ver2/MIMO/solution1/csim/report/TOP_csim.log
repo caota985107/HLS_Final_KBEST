@@ -1,8 +1,27 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../src/TESTBENCH.cpp in debug mode
+   Compiling ../../../../src/aes.cpp in debug mode
+   Compiling ../../../../src/QRD.cpp in debug mode
+   Compiling ../../../../src/DeModulation.cpp in debug mode
    Generating csim.exe
-hello_world_aes_
+--- Results from the TOP function. ---
+--- input_stream.data ---
+amazing_hls_work
+
+--- output_stream.data ---
+¹÷ëx±ΎЛ0xѰô8
+
+--- de_in.data (estimated Encrypted signal)---
+¹÷ëx±ΎЛ0xѰô8
+
+--- de_out.data (estimated Decrypted signal) ---
+amazing_hls_work
+
+
+
+--- Results from the Testbench. ---
+--- The Channel H (Real-Value Decomposition) ---
   0.871094  -0.046875   1.382812  -0.437500   0.496094   0.390625   1.347656   0.746094 
   0.042969   0.871094   0.433594   1.382812  -0.394531   0.496094  -0.750000   1.347656 
  -0.238281  -0.339844   0.433594   1.121094   0.117188   0.390625  -1.500000   1.062500 
@@ -13,40 +32,27 @@ hello_world_aes_
  -0.750000  -0.593750   0.347656   1.742188  -0.277344  -0.496094   0.382812  -0.539062 
 
 ORIGIN SIGNAL is : 
--0.710938
-0.707031
--0.710938
--0.710938
--0.710938
--0.710938
--0.710938
--0.710938
+ -0.710938
+ -0.710938
+ -0.710938
+  0.707031
+  0.707031
+  0.707031
+ -0.710938
+ -0.710938
 
 SIGNAL after KBEST: 
--1.000000
-1.000000
--1.000000
--1.000000
--1.000000
--1.000000
--1.000000
--1.000000
-THE word is : h
-THE word is : e
-THE word is : l
-THE word is : l
-THE word is : o
-THE word is : _
-THE word is : w
-THE word is : o
-THE word is : r
-THE word is : l
-THE word is : d
-THE word is : _
-THE word is : a
-THE word is : e
-THE word is : s
-THE word is : _
-THE word is : ?
+ -1.000000
+ -1.000000
+ -1.000000
+  1.000000
+  1.000000
+  1.000000
+ -1.000000
+ -1.000000
+
+Decrypt Message : 
+amazing_hls_work
+
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

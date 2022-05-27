@@ -3,26 +3,66 @@
   <errorLogs>
     <logs>
       <synLog>
-        <logs message="ERROR: [HLS 200-1715] Encountered problem during source synthesis" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:47.285+0800"/>
-        <logs message="ERROR: [HLS 214-135] Syn check fail!" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:47.268+0800"/>
-        <logs message="ERROR: [HLS 214-136] in function 'TOP(ap_fixed&lt;16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed&lt;16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed&lt;16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed&lt;16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], char*)': Function prototype does not match the calling site (src/QRD.cpp:473:3)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:47.225+0800"/>
+        <logs message="ERROR: [HLS 200-1715] Encountered problem during source synthesis" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:34.132+0800"/>
+        <logs message="ERROR: [HLS 214-135] Syn check fail!" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:34.121+0800"/>
+        <logs message="ERROR: [HLS 214-136] in function 'TOP(ap_fixed&lt;16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed&lt;16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed&lt;16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed&lt;16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], char*)': Function prototype does not match the calling site (src/QRD.cpp:492:3)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:34.084+0800"/>
       </synLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [HLS 214-189] Pipeline directive for loop 'VITIS_LOOP_553_3' (src/aes.cpp:553:20) in function 'AES_En_De' has been removed because the loop is unrolled completely (src/aes.cpp:519:0)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:46.065+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'gaussianR' (src/rng.hpp:1450:39)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.947+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'uniformR' (src/rng.hpp:1450:22)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.923+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'uniformR' (src/rng.hpp:1441:22)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.920+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'C' (src/rng.hpp:1426:64)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.915+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'B' (src/rng.hpp:1426:49)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.912+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'A' (src/rng.hpp:1426:34)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.907+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'data' (src/rng.hpp:1417:34)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.904+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'seed' (src/rng.hpp:1410:41)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.899+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'seed' (src/rng.hpp:1401:30)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.896+0800" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5287] unused parameter 'gaussL' (src/rng.hpp:1118:40)" projectName="MIMO" solutionName="solution1" date="2022-05-26T18:28:30.890+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-189] Pipeline directive for loop 'VITIS_LOOP_553_3' (src/aes.cpp:553:20) in function 'AES_En_De' has been removed because the loop is unrolled completely (src/aes.cpp:519:0)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:33.323+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'gaussianR' (src/rng.hpp:1450:39)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.775+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'uniformR' (src/rng.hpp:1450:22)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.718+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'uniformR' (src/rng.hpp:1441:22)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.700+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'C' (src/rng.hpp:1426:64)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.680+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'B' (src/rng.hpp:1426:49)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.662+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'A' (src/rng.hpp:1426:34)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.561+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'data' (src/rng.hpp:1417:34)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.546+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'seed' (src/rng.hpp:1410:41)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.540+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'seed' (src/rng.hpp:1401:30)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.436+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'gaussL' (src/rng.hpp:1118:40)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.418+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'gaussR' (src/rng.hpp:1118:25)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.409+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'gaussianR' (src/rng.hpp:1110:39)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.404+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'uniformR' (src/rng.hpp:1110:22)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.399+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'uniformR' (src/rng.hpp:1100:22)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.394+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'data' (src/rng.hpp:1086:34)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.390+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'seed' (src/rng.hpp:1079:41)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.386+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'seed' (src/rng.hpp:1070:31)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.373+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:968:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:04:25.365+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:967:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.957+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:957:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.952+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:956:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.948+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:536:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.944+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:534:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.939+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:531:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.934+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:529:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.929+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:526:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.925+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:524:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.921+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:522:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.916+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:520:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.911+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:518:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.907+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:516:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.901+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:510:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.896+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:507:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.850+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:505:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.784+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:503:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.780+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:501:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.775+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:499:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.758+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:497:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.753+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:495:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.738+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:493:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.710+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:491:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.685+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:489:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.581+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:473:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.578+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:471:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.575+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:454:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.566+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:452:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.563+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:448:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.559+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:379:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.556+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:373:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.541+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5523] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/rng.hpp:370:9)" projectName="MIMO" solutionName="solution1" date="2022-05-27T22:03:59.539+0800" type="Warning"/>
       </synLog>
     </logs>
   </warningLogs>
